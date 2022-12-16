@@ -6,7 +6,7 @@ sidebar_position: 1
 
 A living record.
 
-Documentation created using Docusaurus. You can view and edit the code on the [Github Repo](https://github.com/prenda-school/how-we-enginer)
+Documentation created using Docusaurus. You can view and edit the code on the [Github Repo](https://github.com/prenda-school/prenda-school.github.io)
 
 Feel free to open pull requests to add new pages or update current pages. We want to to be a collaborative document that helps us work better together.
 
