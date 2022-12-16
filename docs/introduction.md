@@ -10,7 +10,7 @@ Documentation created using Docusaurus. You can view and edit the code on the [G
 
 Feel free to open pull requests to add new pages or update current pages. We want to to be a collaborative document that helps us work better together.
 
-Check out our [engineering team principles](./how-we-engineer)
+Check out our [engineering team principles](./Engineering Practices/how-we-engineer)
 
 Documents can live elsewhere and be linked here. We'll probably organize them better, but for now here's
 [API Implementation Checklist](https://docs.google.com/document/d/1DLZUOwNfhxwvbDENJov_ck67Nymw-GfpIy8F65WizdQ/edit#heading=h.rul7rkngdnft)

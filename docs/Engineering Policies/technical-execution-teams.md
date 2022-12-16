@@ -2,7 +2,7 @@
 # Technical Execution Teams Prioritization and Approach
 
 
-### _Nov 16, 2022 - Due to organization changes, there will be changes to this approach and document coming soon from the Product Management Team. ~Monte_
+** _Nov 16, 2022 - Due to organization changes, there will be changes to this approach and document coming soon from the Product Management Team. ~Monte_ **
 
 
 ##### Updated November 2022
