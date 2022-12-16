@@ -9,7 +9,7 @@ const config = {
   title: 'Prenda Engineering Documentation',
   tagline: 'A place to collaborate on engineering documentation',
   url: 'https://prenda-school.github.io/',
-  baseUrl: '/prenda-engineering',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
