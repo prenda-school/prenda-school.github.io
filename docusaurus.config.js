@@ -37,7 +37,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/prenda-school/prenda-school.github.io/tree/main/docs',
+            'https://github.com/prenda-school/prenda-school.github.io/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
