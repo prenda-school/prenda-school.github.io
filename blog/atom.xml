@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prenda-school.github.io/blog"/>
     <subtitle>Prenda Engineering Documentation Blog</subtitle>
-    <icon>https://prenda-school.github.io/img/favicon.ico</icon>
+    <icon>https://prenda-school.github.io/img/favicon.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
