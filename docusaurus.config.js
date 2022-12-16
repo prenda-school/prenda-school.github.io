@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'DapperFox', // Usually your GitHub org/user name. TODO: prenda-school
-  projectName: 'prenda-engineering', // Usually your repo name. TODO: prenda-school
+  organizationName: 'prenda-school', // Usually your GitHub org/user name.
+  projectName: 'prenda-school.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
