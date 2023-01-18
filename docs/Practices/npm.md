@@ -7,7 +7,7 @@ Use `nvm` and install packages with `npm ci` unless you're actively updating or 
 ### Node and NPM version management
 
 We encourage using a version manager to switch Node and NPM versions between different projects.
-PrendaWorld uses Meteor which is very specific and controlling about when you can update Node, so consistency is important.
+PrendaWorld is built on the Meteor framework which bundles and uses a set version of Node and NPM.
 The main version control software for NPM is [NVM](https://github.com/nvm-sh/nvm) after installation, `cd` into the directory and then run `nvm use` for more information please see their [documentation](https://github.com/nvm-sh/nvm#usage).
 
 You can also use [ASDF](https://asdf-vm.com/) which is a version manager for multiple languages, including node.
@@ -16,19 +16,17 @@ You can also use [ASDF](https://asdf-vm.com/) which is a version manager for mul
 
 * We encourage keeping npm packages up to date and using best practices when considering installing packages, updating packages, and removing packages.
 * We should use proper [SEMVER](https://semver.org/) practices. This includes using your package.json to define what versions of the package are okay to install. We should try to default to only patch updates (with `~`) to minimize accidental updates of minor packages that _could_ break the application.
-* When working in projects like PrendaWorld, if you aren't installing new packages, or planning on changing versions of packages for that release, when installing packages please **use `npm ci` instead of `npm i` so that the package-lock.json doesn't get updated**.
-* We encourage seperation of `package.json`/`package-lock.json` updates and code updates, the only exception is when using a new package for code you're working on or having to update a package to use a new feature.
+* We encourage use of `npm install` (or `npm i`, for short) after every pull, or reasonably often, to ensure developers are always working with the latest dependencies installed.
+  * We require that updates to the package-lock (`package-lock.json`) made through the use of the routine `npm install` are submitted in dedicated PR's, not mixed with other code changes -- they are expected and apply to every engineer's environment.
+  * These routine, "re"-installs are a separate concern from modifying dependencies, see below.
+* We encourage the use of `npm ci` to simulate the behavior and environment in automated processes like continuous integration jobs. This command should never change the package-lock.
+* We encourage seperation of modifying (installing project dependencies, i.e. changes to the package and lock file (`package.json`/`package-lock.json`).
+  * "modifying" = installing, uninstalling, upgrading, downgrading, etc.
+  * The exception is dependency modification for code you're working on or having to that is essentially tied to other code modifications, e.g. replacing one package for another and refactoring the code to use the new package instead of the old.
 
 ### Meteor Specific Practices
 
-Meteor encourages using an alias for npm with `meteor npm install` for _reasons_ linked below. As long as you'se using the proper version you can run the install command through npm. 
-
-```
-npm ci 
-```
-
-According to the [meteor forum](https://forums.meteor.com/t/meteor-npm-install-vs-npm-install/20495/3) this is so that you don't have to have npm installed globally, but since we're using NVM or ASDF, as long as you have the correct version of node and npm when you're in the project, it offers no value.
-
+Meteor encourages using the version of Node and NPM bundled with the tool through its commands like `meteor node .` and `meteor npm ...`. Syncing the version of Node/NPM you are using, like outlined above, is an equivalent solution to this advice. 
 
 ### Package update tools
 
