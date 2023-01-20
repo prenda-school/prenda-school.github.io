@@ -6,11 +6,9 @@ Use `nvm` and install packages with `npm ci` unless you're actively updating or 
 
 ### Node and NPM version management
 
-We encourage using a version manager to switch Node and NPM versions between different projects.
-PrendaWorld is built on the Meteor framework which bundles and uses a set version of Node and NPM.
-The main version control software for NPM is [NVM](https://github.com/nvm-sh/nvm) after installation, `cd` into the directory and then run `nvm use` for more information please see their [documentation](https://github.com/nvm-sh/nvm#usage).
+We encourage using a version manager to switch Node and NPM versions between different projects. We suggest using the Node Version Manager project, [NVM](https://github.com/nvm-sh/nvm). After installation, `cd` into the directory and then run `nvm use`. For more information, please see the [NVM usage documentation](https://github.com/nvm-sh/nvm#usage). You can also use [ASDF](https://asdf-vm.com/) which is a version manager for multiple languages, including node.
 
-You can also use [ASDF](https://asdf-vm.com/) which is a version manager for multiple languages, including node.
+In the case of Prenda World, the project is built on the Meteor framework which bundles and uses a set version of Node and NPM. The Meteor documentation advises using these bundled instances that are accessible under the Meteor program, `meteor node ...` and `meteor npm ...`. We maintain synchronization of the bundled Meteor versions with the project configuration file so that it is **equivalent** for you to use Node/NPM directly after using your version manager: `nvm use` and then `node ...` or `npm ...`.
 
 ### Package updates
 
