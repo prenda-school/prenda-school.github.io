@@ -33,7 +33,7 @@ This document will not attempt to answer all critiques of these UAs nor will it 
 
 - Don't require more data for a function than is required. *A slim API is less risky to change and easier maintain and reason about.*
 
-- All data should only have a single source of truth. More specifically only a single field on a single table/collection within a given schema should be available for mutation when data needs to be mutated for that field. *It is ok for data to be stored in multiple places as long as the source of truth is always one location.*
+- All data should only have a single source of truth. *It is ok for data to be stored in multiple places as long as the source of truth is always one location. For concepts that exist within multiple domains (students), it is perfectly acceptable for that concept to have it's source of truth spread across data stores as long as no part (field) of any individual meaning is has it's source of truth in more than one location.*
 
 - The known errors of a command/query within a Vertical Slice should be included in it's type signature. *It is recommended to coerce exceptions to values for known errors whenever possible, but at minimum no known errors should be exposed from a command/query function by way of thrown exception.*
 
