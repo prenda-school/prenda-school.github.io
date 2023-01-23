@@ -26,7 +26,6 @@ The code within a Bounded Context cannot depend upon the code within another bou
 
 ## Non Goals
 - Don't Repeat Yourself (DRY) and Brevity at the expensive of clarity. *DRYness and Brevity are powerful tools to readability and understandability, but these should be seen as side effects of Clarity. If ever in doubt about a decision between dry/brevity and clarity. Flexibility is also valuable given Prenda's current state (link to diagnosis doc). There are many instances in which sacrificing DRYness and Brevity for flexibility is the correct choice.*
-- Define code styling or abstraction implementation. *
 
 ## Guidelines
 - Code sharing between bounded contexts should be avoided by default. *This is a concept borrowed from Domain Driven Design - specifically Bounded Contexts.*
@@ -43,7 +42,14 @@ The code within a Bounded Context cannot depend upon the code within another bou
 
 - All data should only have a single source of truth. More specifically only a single field on a single table/collection within a given schema should be available for mutation when data needs to be mutated for that field. *It is ok for data to be stored in multiple places as long as the source of truth is always one location.*
 
-- The known errors of a command/query within a Vertical Slice should be included in it's type signature. *It is recommended to coerce exceptions to values for known errors whenever possible, but at minimum no known errors should be exposed from a command/query function by way of thrown exception.* 
+- The known errors of a command/query within a Vertical Slice should be included in it's type signature. *It is recommended to coerce exceptions to values for known errors whenever possible, but at minimum no known errors should be exposed from a command/query function by way of thrown exception.*
+
+- If an error represents a possible bad data state there should be documentation regarding this bad data state and how to remediate it. *At minimum there should be a comment attached to the type definition for a given error that provides appropriate context.*
+
+- When a bug is fixed an existing test should be updated to "prove" the fix or a new test should be written to accompany the fix.
+
+## Wiggle Room
+This document doesn't aim to define code styling (commads, linting rules, args as object vs not) nor does it aim to define the implementation of given abstractions as long as they don't deviate from the guidelines. *For example you could have one Vertical Slice utilizing a driver to execute queries directly against a database through a connection while another Vertical Slice utilizes an ORM. As long as both slices don't expose database concerns to the consumer of a given slice then both strategies are acceptable. Another example would be tests. Maybe one slice tests itself by unit tests via isolated dependency and mocks + integration tests for side effecst while another test uses just uses api level integration (acceptance) testing. Both are acceptable as long as there is coverage.*
 
 ## Future Goals
 - If and as we collect more data/it grows in complexity - apply the same decoupling of domains by way of bounded contexts to our databases. *We should condsider breaking up the database. Technical requirements and prudence should drive the implementation of breakup (schemas vs instances, etc). Each new distinct piece should relate to a given bouned context and should house ONLY the data required to support the Vertical Slices of those BCs.*
