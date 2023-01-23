@@ -1,20 +1,13 @@
 # Working with Bounded Contexts in Hub
 
 ## Intro
-We utilize a combination of Domain Driven Design, Bounded Contexts, Command Query Separation, Verticle Slices Architecture, Functional styled Procedural Programming, Ports and Adapters, and Onion Architecture within backend code here at Prenda. As of this writing these patterns are only really used for new code within the Hub application. For the puroses of this document we'll reference these and other core patterns, paradigms, tools, or principles as "useful abstractions (UA)". The goal of this document will be to explain what parts of these useful abstractions we use, why, and how. It will also include some thoughts on the future UAs and what the conditions might be to utilize some of them or pivot away from current ones.
+We utilize a combination of Domain Driven Design, Bounded Contexts, Command Query Separation, Verticle Slices Architecture, Functional styled Procedural Programming, Ports and Adapters, The Repository Pattern, and Onion (aka Clean aka Hexagonal) Architecture within backend code here at Prenda. As of this writing these patterns are only really used for new code within the Hub application. For the puroses of this document we'll reference these and other core patterns, paradigms, tools, or principles as "useful abstractions (UA)". 
 
-You may also see the Repository Pattern, TODO, and TODO. These are not as heavily used UAs and they are not to be considered non-core UAs (as opposed to the initial UAs which could be considered core UAs). 
+The purpose of utilizing these UAs is to help achieve a set of defined goals that are outlined further in this document.
 
-This document will not attempt to answer all critiques of these UAs nor will it discuss the in depth the tradeoffs of why these UAs are the right tools. That is not the purpose of this document and should be documented elsewhere.
+Not all UAs are implemented dogmatically, and doing so would lead to many instances of conflict between the UAs. Rather choice core principles from the UAs have been chosen and applied in such a way that these principles are orthogonal to each other and support well the defined goals.
 
-## What
-We sparingly utilize strategies and patterns from Domain Driven Design (DDD). Primarily we utilize the Bounded Contexts (BC) concept. We currently implement Bounded Contexts within this monolithic application of Hub, though you may find some familiarity to BCs within the inherent logical boundaries that are present with other services (Enrollments Portal) due to the inherent constraints of multiple services.
-
-The code within a Bounded Context cannot depend upon the code within another bounded context, EXCEPT for specified ports. The implementation of these ports are queries and commands. If there is a mismatch in similar shapes then a consumer is responsible for writing an adapter to the the current shape of the port. Only if an adapter is not possible due to unideal behavior, mismatch in shapes, mismatches in meaning, etc. shall the port be altered to allow consumption. Alterations that add new fields shall not need to be versioned. Other alterations which remove fields, change meaning, or change behavior, shall require versioning.
-
-## Why
-
-## How
+This document will not attempt to answer all critiques of these UAs nor will it discuss the in depth the tradeoffs of why these UAs are the right tools.
 
 ## Goals
 - Code for a given capability is easy to find.
@@ -28,7 +21,7 @@ The code within a Bounded Context cannot depend upon the code within another bou
 - Don't Repeat Yourself (DRY) and Brevity at the expensive of clarity. *DRYness and Brevity are powerful tools to readability and understandability, but these should be seen as side effects of Clarity. If ever in doubt about a decision between dry/brevity and clarity. Flexibility is also valuable given Prenda's current state (link to diagnosis doc). There are many instances in which sacrificing DRYness and Brevity for flexibility is the correct choice.*
 
 ## Guidelines
-- Code sharing between bounded contexts should be avoided by default. *This is a concept borrowed from Domain Driven Design - specifically Bounded Contexts.*
+- Other than the consumption of a command or query, code sharing between bounded contexts should be avoided by default. There may be cases where a bounded context is implemented in a different project. In this case no dependency should be had on the code of that project and integration must be done asynchronously (http call, event handler, etc).  *This is a concept borrowed from Domain Driven Design - specifically Bounded Contexts.*
 
 - The only dependencies between Vertical Slices (different command and queries) should be usages of the command or query function from another slice. Using shared code that sits outside the slice is fine. There are occasional exceptions to this rule (link to exception). *Vertical Slices revolve around the axis of change being a slice. We want to couple along the axis of change.*
 
