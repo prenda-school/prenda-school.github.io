@@ -48,12 +48,20 @@ The code within a Bounded Context cannot depend upon the code within another bou
 
 - When a bug is fixed an existing test should be updated to "prove" the fix or a new test should be written to accompany the fix.
 
+- 
+
 ## Wiggle Room
 This document doesn't aim to define code styling (commads, linting rules, args as object vs not) nor does it aim to define the implementation of given abstractions as long as they don't deviate from the guidelines. *For example you could have one Vertical Slice utilizing a driver to execute queries directly against a database through a connection while another Vertical Slice utilizes an ORM. As long as both slices don't expose database concerns to the consumer of a given slice then both strategies are acceptable. Another example would be tests. Maybe one slice tests itself by unit tests via isolated dependency and mocks + integration tests for side effecst while another test uses just uses api level integration (acceptance) testing. Both are acceptable as long as there is coverage.*
 
-## Future Goals
-- If and as we collect more data/it grows in complexity - apply the same decoupling of domains by way of bounded contexts to our databases. *We should condsider breaking up the database. Technical requirements and prudence should drive the implementation of breakup (schemas vs instances, etc). Each new distinct piece should relate to a given bouned context and should house ONLY the data required to support the Vertical Slices of those BCs.*
+## The Future
+- If and as we collect more data/it grows in complexity - we likely will need to apply the same decoupling of domains by way of bounded contexts to our databases. *We should condsider breaking up the database. Technical requirements and prudence should drive the implementation of breakup (schemas vs instances, etc). Each new distinct piece should relate to a given bouned context and should house ONLY the data required to support the Vertical Slices of those BCs.*
 
 ## Additional Principles
 These principles, while value adding, do not directly support the goals nor did they fall into non-goal. As such guidelines were not built around these principles.
 
+- Validate at all IO boundaries. *Typescript can be a powerful tool, but it is only useful at compile time (as you write and build code). Validating that data being ingested by a process written using Typescript can go a long way in ensuring that the type safety provided by Typescript is reliable.*
+
+- Endeavour to make invalid states impossible. *Example1: If performing operations that utilize an email address which must be validated, consider creating a branded type `type ValidatedEmail = { _tag: "ValidatedEmail"; value: string }` rather than utilizing a `string`. Example2: Rather than `type School = { name: string; familyData?: FamilyData; partnerData?: PartnerData }` do `type School = FamilySchool | PartnerSchool; type FamilySchool = { _tag: "FamilySchool"; name: string; familyData: FamilyData }; type PartnerSchool = { _tag: "PartnerSchool"; name: string; partnerData: PartnerData }`*
+
+## How this doc changes
+TODO
