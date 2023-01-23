@@ -17,19 +17,37 @@ The code within a Bounded Context cannot depend upon the code within another bou
 ## How
 
 ## Goals
+- Code for a given capability is easy to find.
+- Changes to a given behavior are less risky.
+- The effects of a change to a domain model shape are clear and should cascade and only to those dependents that actually utilize the changes.
+- The API of code implementing a behavior is clear. *You should know exactly what data is required to successfully initiate a behavior as well as understanding exactly how 
+- Failures due to essential complexity should be uniquely and easily identifiable and bad data states caused by such errors should be easily remediated.
+- Code should be covered by automated tests. *Testing strategy and acceptable coverage (shoot for as much as possible) are not currently specified).
 
 ## Non Goals
 - Don't Repeat Yourself (DRY) and Brevity at the expensive of clarity. *DRYness and Brevity are powerful tools to readability and understandability, but these should be seen as side effects of Clarity. If ever in doubt about a decision between dry/brevity and clarity. Flexibility is also valuable given Prenda's current state (link to diagnosis doc). There are many instances in which sacrificing DRYness and Brevity for flexibility is the correct choice.*
+- Define code styling or abstraction implementation. *
 
 ## Guidelines
-Code sharing between bounded contexts should be avoided by default. *This is a concept borrowed from Domain Driven Design - specifically Bounded Contexts.*
+- Code sharing between bounded contexts should be avoided by default. *This is a concept borrowed from Domain Driven Design - specifically Bounded Contexts.*
 
-The only dependencies between Vertical Slices (different command and queries) should be usages of the command or query function from another slice. Using shared code that sits outside the slice is fine. There are occasional exceptions to this rule (link to exception). *Vertical Slices revolve around the axis of change being a slice. We want to couple along the axis of change.*
+- The only dependencies between Vertical Slices (different command and queries) should be usages of the command or query function from another slice. Using shared code that sits outside the slice is fine. There are occasional exceptions to this rule (link to exception). *Vertical Slices revolve around the axis of change being a slice. We want to couple along the axis of change.*
 
-Base types representing the shape of domain models should be in the domain directory at the bounded context root. These types can be shared, often for the purpose of derivatives, among alices.
+- Base types representing the shape of domain models should be in the domain directory at the bounded context root. These types can be shared, often for the purpose of derivatives, among slices.
 
-Domain types, regardless of whether scoped to a slice or scoped to a bounded context, should not depend on code that is not itself either domain code itself or is a generic utility type (error handling, ts utils, and such). *This is a concept borrowed from Clean/Hexagonal/Onion architecture and key piece in the internal consistency of our domain model if followed. Exceptions to this rule should be very slim or non existent.*
+- Domain types, regardless of whether scoped to a slice or scoped to a bounded context, should not depend on code that is not itself either domain code or is a generic utility type (error handling, ts utils, and such). *This is a concept borrowed from Clean/Hexagonal/Onion architecture and key piece in the internal consistency of our domain model if followed. Exceptions to this rule should be very slim or non existent.*
 
-Repository layer code is the only code that should depend on types representing the shape of database table/view/query/etc. *The implementation details of data persistence should not be exposed to consumers of a domain model that utilizes said persistence. One of the quickest ways to a building a ball of mud is to do let a database schema (slow and risky to change) be the source of truth for the shape of a domain model across all layers and systems. There are cases where this is ok (constrained problem space, prototypes, etc), but this should be avoided by default. More reading (LINK)*
+- Repository layer code is the only code that should depend on types representing the shape of database table/view/query/etc. *The implementation details of data persistence should not be exposed to consumers of a domain model that utilizes said persistence. One of the quickest ways to a building a ball of mud is to do let a database schema (slow and risky to change) be the source of truth for the shape of a domain model across all layers and systems. There are cases where this is ok (constrained problem space, prototypes, etc), but this should be avoided by default. More reading (LINK)*
 
-## Future
+- Don't require more data for a function than is required. *A slim API is less risky to change and easier maintain and reason about.*
+
+- All data should only have a single source of truth. More specifically only a single field on a single table/collection within a given schema should be available for mutation when data needs to be mutated for that field. *It is ok for data to be stored in multiple places as long as the source of truth is always one location.*
+
+- The known errors of a command/query within a Vertical Slice should be included in it's type signature. *It is recommended to coerce exceptions to values for known errors whenever possible, but at minimum no known errors should be exposed from a command/query function by way of thrown exception.* 
+
+## Future Goals
+- If and as we collect more data/it grows in complexity - apply the same decoupling of domains by way of bounded contexts to our databases. *We should condsider breaking up the database. Technical requirements and prudence should drive the implementation of breakup (schemas vs instances, etc). Each new distinct piece should relate to a given bouned context and should house ONLY the data required to support the Vertical Slices of those BCs.*
+
+## Additional Principles
+These principles, while value adding, do not directly support the goals nor did they fall into non-goal. As such guidelines were not built around these principles.
+
