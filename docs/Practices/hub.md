@@ -18,7 +18,7 @@ This document will not attempt to answer all critiques of these UAs nor will it 
 - Code should be covered by automated tests. *Testing strategy and acceptable coverage (shoot for as much as possible) are not currently specified).
 
 ## Non Goals
-- Don't Repeat Yourself (DRY) and Brevity at the expensive of clarity. *DRYness and Brevity are powerful tools to readability and understandability, but these should be seen as side effects of Clarity. If ever in doubt about a decision between dry/brevity and clarity. Flexibility is also valuable given Prenda's current state (link to diagnosis doc). There are many instances in which sacrificing DRYness and Brevity for flexibility is the correct choice.*
+- Don't Repeat Yourself (DRY) and Brevity at the expensive of clarity. *DRYness and Brevity are often associated with readability and understandability, but these should be seen as side effects of Clarity. If ever in doubt about a decision between dry/brevity and clarity. Flexibility is also valuable given Prenda's current state (link to diagnosis doc). There are many instances in which sacrificing DRYness and Brevity for flexibility is the correct choice.*
 
 ## Guidelines
 - Other than the consumption of a command or query, code sharing between bounded contexts should be avoided by default. There may be cases where a bounded context is implemented in a different project. In this case no dependency should be had on the code of that project and integration must be done asynchronously (http call, event handler, etc).  *This is a concept borrowed from Domain Driven Design - specifically Bounded Contexts.*
