@@ -63,6 +63,9 @@ Naming:
 Tests:
 - Test files should sit close to the code they test. *Test files that test code in disparate files should be broken up into multiple test files itself.*
 
+SQL:
+- Avoid using the (massive scripts directory)[https://massivejs.org/docs/functions-and-scripts]. Prefer instead to define a query as close to it's consumers as possible. *Defining queries in the scripts directory opens up the possibility of unintended coupling by non cohesive modules. There are solutions to syntax highlighting that don't require a .sql file.*
+
 ## The Future
 - If and as we collect more data/it grows in complexity - we likely will need to apply the same decoupling of domains by way of bounded contexts to our databases. *We should condsider breaking up the database. Technical requirements and prudence should drive the implementation of breakup (schemas vs instances, etc). Each new distinct piece should relate to a given bouned context and should house ONLY the data required to support the Vertical Slices of those BCs.*
 
