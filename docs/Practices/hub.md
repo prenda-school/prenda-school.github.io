@@ -49,6 +49,20 @@ There are cases of existing code not meeting these existing guidelines. Refactor
 ## Wiggle Room
 This document doesn't aim to define code styling (commads, linting rules, args as object vs not) nor does it aim to define the implementation of given abstractions as long as they don't deviate from the guidelines. *For example you could have one Vertical Slice utilizing a driver to execute queries directly against a database through a connection while another Vertical Slice utilizes an ORM. As long as both slices don't expose database concerns to the consumer of a given slice then both strategies are acceptable. Another example would be tests. Maybe one slice tests itself by unit tests via isolated dependency and mocks + integration tests for side effecst while another test uses just uses api level integration (acceptance) testing. Both are acceptable as long as there is coverage.*
 
+## Conventions
+Naming:
+- The entrypoint function for a command or query should start with `command` or `query`.
+- The entrypoint function for a command or query should be in a file called `command.ts` or `query.ts` OR in a region called `Command` or `Query`.
+- Domain code should either be in files named appropriate to the model/process/rule/etc. within a `domain` directory, or be in a `domain.ts` file, or be in a region called `Domain`.
+- Legacy request handlers that are related to a bounded context and are expected to be maintained/iterated should be put in a `legacy-handlers` directory within the appropriate bounded context.
+- Integration code for 3rd party services should be in a `Data` directory.
+- Repository code (code that interects with a data store), should be in a file called `repository.ts`, OR in a region called `Repository`.
+- (Request or Event) Handlers exposing a command should be in a file called `api.ts`, a region called `API`, or in files called `request.ts` or `event.ts` in a directory called `handlers`.
+- Integration code for bounded contexts in a different project should be in a `dependent-bcs` directory with sub directories matching tha appropriate bounded context. *As of Jan 24 2023 this is not being utilized. Defining this early to reduce decision overhead when this occurs.*
+
+Tests:
+- Test files should sit close to the code they test. *Test files that test code in disparate files should be broken up into multiple test files itself.*
+
 ## The Future
 - If and as we collect more data/it grows in complexity - we likely will need to apply the same decoupling of domains by way of bounded contexts to our databases. *We should condsider breaking up the database. Technical requirements and prudence should drive the implementation of breakup (schemas vs instances, etc). Each new distinct piece should relate to a given bouned context and should house ONLY the data required to support the Vertical Slices of those BCs.*
 
