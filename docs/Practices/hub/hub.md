@@ -83,6 +83,7 @@ These principles, while value adding, do not directly support the goals nor did 
 - Endeavour to make invalid states impossible. *Example1: If performing operations that utilize an email address which must be validated, consider creating a branded type `type ValidatedEmail = { _tag: "ValidatedEmail"; value: string }` rather than utilizing a `string`. Example2: Rather than `type School = { name: string; familyData?: FamilyData; partnerData?: PartnerData }` do `type School = FamilySchool | PartnerSchool; type FamilySchool = { _tag: "FamilySchool"; name: string; familyData: FamilyData }; type PartnerSchool = { _tag: "PartnerSchool"; name: string; partnerData: PartnerData }`*
 
 ## Contributing
+TODO
 
 ### Process to change
 TODO
