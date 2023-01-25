@@ -5,6 +5,11 @@ The following are simply links to useful abstractions that may or may not be ref
 
 ## Coupling and Cohesion
 This may be the most important concept to understand.
+- [Coupling and Cohesion Short](https://www.youtube.com/shorts/K_Z9FJ7jdFo) *1 min watch*
+- [Highly COHESIVE Software Design to tame Complexity](https://www.youtube.com/watch?v=r0-GC3Y_OME) *9 min watch*
+  - *[In large systems, the idea of having a single entity live in a single table just isn't reality](https://youtu.be/r0-GC3Y_OME?t=128). This quote and the example he gives can be applied to many entities within Prenda software: [Micro]school, term, guide, etc.*
+- []()
+- []()
 
 ## Vertical Slices
 
