@@ -1,13 +1,13 @@
 # Working with Bounded Contexts in Hub
 
 ## Intro
-We utilize a combination of Domain Driven Design, Bounded Contexts, Command Query Separation, Verticle Slices Architecture, Functional styled Procedural Programming, Ports and Adapters, The Repository Pattern, and Onion (aka Clean aka Hexagonal) Architecture within backend code here at Prenda. As of this writing these patterns are only really used for new code within the Hub application. For the puroses of this document we'll reference these and other core patterns, paradigms, tools, or principles as "useful abstractions (UA)". 
+This document outlines a number of guidelines to follow while working in Hub. These guidelines are intended to lead an engineer towards achieving a set of goals outlined below. These guidelines are based around a set of common patterns, paradigms, tools, or principles that we'll call useful abstractions (UA) for the purpose of this document.
 
-The purpose of utilizing these UAs is to help achieve a set of defined goals that are outlined further in this document.
+So what are some of the useful abstractions that we utilize? Some of the notable UAs are Domain Driven Design, Bounded Contexts, Command Query Separation, Verticle Slices Architecture, Functional styled Procedural Programming, Ports and Adapters, The Repository Pattern, and Onion (aka Clean aka Hexagonal) Architecture. Not all UAs are implemented dogmatically, and doing so would lead to many instances of conflict between the UAs. Rather choice core parts from the UAs have been chosen and applied in such a way that these parts are orthogonal to each other and support well the defined goals.
 
-Not all UAs are implemented dogmatically, and doing so would lead to many instances of conflict between the UAs. Rather choice core principles from the UAs have been chosen and applied in such a way that these principles are orthogonal to each other and support well the defined goals.
+As of this writing these patterns are only really used for new code within the Hub application.
 
-This document will not attempt to answer all critiques of these UAs nor will it discuss the in depth the tradeoffs of why these UAs are the right tools.
+This document will not attempt to answer all critiques of these UAs nor will it discuss the in depth the tradeoffs of why these UAs are the right tools. There are links towards the bottom of the document to resources that can help facilitate learning.
 
 ## Goals
 - Code for a given capability is easy to find.
