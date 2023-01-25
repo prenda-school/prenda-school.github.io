@@ -4,13 +4,14 @@ The following are simply links to useful abstractions that may or may not be ref
 ## Validatation
 
 ## Coupling and Cohesion
-This may be the most important concept to understand.
+This may be the most important concept to understand. Goal is high cohesion and low coupling. Easier said than done.
 - [Coupling and Cohesion Short](https://www.youtube.com/shorts/K_Z9FJ7jdFo) *1 min watch*
 - [Highly COHESIVE Software Design to tame Complexity](https://www.youtube.com/watch?v=r0-GC3Y_OME) *9 min watch*
   - *[In large systems, the idea of having a single entity live in a single table just isn't reality](https://youtu.be/r0-GC3Y_OME?t=128). This quote and the example he gives can be applied to many entities within Prenda software: [Micro]school, term, guide, etc.*
-- []()
-- []()
-
+- [Low Coupling, High Cohesion](https://medium.com/clarityhub/low-coupling-high-cohesion-3610e35ac4a6) *3 min read*
+- [AVOID Entity Services by Focusing on Capabilities (snippet)](https://youtu.be/2gOOstEI4vU?t=383) *2 min watch - watch from linked timestamp*
+- [SOLID Principles? Nope, just Coupling and Cohesion](https://www.youtube.com/watch?v=YDNR_gfBk0Q&ab_channel=CodeOpinion) *14 min watch*
+  - *[In my experience, informational cohesion can really drive a large degree of coupling.](https://youtu.be/YDNR_gfBk0Q?t=228)*
 ## Vertical Slices
 
 ## Bounded Contexts
@@ -21,6 +22,8 @@ This may be the most important concept to understand.
 ## Clean/Hexagonal/Onion Architecture
 
 ## Ports and Adapters
+
+## More than CRUD
 
 ## Slim Apis are Easier to Maintain 
 
