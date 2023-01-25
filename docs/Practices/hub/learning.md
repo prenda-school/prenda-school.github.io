@@ -1,4 +1,5 @@
-# Learning Resources
+# Useful Abstractions Learning
+The following are simply links to useful abstractions that may or may not be references by the [guidelines](./hub.md#guidelines) for Hub. These are intended as reference material and are not a canonical list of abstractions we implement in full or part within Hub or
 
 ## Validatation
 
@@ -39,3 +40,6 @@ This may be the most important concept to understand.
 ## Command Query Separation
 
 ## Errors as Values
+
+
+# Additional Learning

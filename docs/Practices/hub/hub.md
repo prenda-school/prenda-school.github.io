@@ -56,7 +56,7 @@ Any code that must break a guideline should be called out, addressed, and either
 Sometimes guidance that provides more specificity than a guideline needs to exist. 
 
 
-More often than not this is for enabling better implication. For example a naming convention allows engineers to draw better and more accurate conclusions without needing to review documentation. 
+More often than not this is for enabling better implication. For example a naming convention allows engineers to draw better and more accurate conclusions without needing to review documentation.
 
 Additionally guidelines might be library, framework, or project specific. Defining rules around how to interact with a library for example might be pragmatic if that library has capabilities that by some usages might conflict with existing guidelines.
 
@@ -71,7 +71,7 @@ Naming:
 - Repository code (code that interects with a data store), should be in a file called `repository.ts`, OR in a region called `Repository`.
 - (Request or Event) Handlers exposing a command should be in a file called `api.ts`, a region called `API`, or in files called `request.ts` or `event.ts` in a directory called `handlers`.
 - Integration code for bounded contexts in a different project should be in a `dependent-bcs` directory with sub directories matching tha appropriate bounded context. *As of Jan 24 2023 this is not being utilized. Defining this early to reduce decision overhead when this occurs.*
-- CRUD type functions that create new records, fetch records by an unique id with no other filters, or mutate existing records without conditions, should reside in a directory called `crud-fns` within the shared `repository` directory.
+- CRUD type functions that create new records in a single tab, fetch records by an unique id with no other filters from a single table, or mutate existing records without conditions from a single table, should reside in a directory called `crud-fns` within the shared `repository` directory.
 
 Tests:
 - Test files should sit close to the code they test. *Test files that test code in disparate files should be broken up into multiple test files itself.*
@@ -80,16 +80,16 @@ SQL:
 - Avoid using the [massive scripts directory](https://massivejs.org/docs/functions-and-scripts). Prefer instead to define a query as close to it's consumers as possible. *Defining queries in the scripts directory opens up the possibility of unintended coupling by non cohesive modules. There are solutions to syntax highlighting that don't require a .sql file.*
 
 ## The Future
-- In the very near future it might make sense to refactor out shared repo shapes functions in the Microschool Administration and Support Bounded Context to a layer that is shared between all bounded contexts. *It's a fact that the lion's share of data utilized by Hub is in a one of the schemas in our postgres instance and utilizing a single shared layer among all consumers within Hub might be the most pragmatic approach.*
+- In the very near future it might make sense to refactor out shared repository shapes and functions in the Microschool Administration and Support Bounded Context to a layer that is shared between all bounded contexts. *It's a fact that the lion's share of data utilized by Hub is in a one of the schemas in our postgres instance and utilizing a single shared layer among all consumers within Hub might be the most pragmatic approach.*
 
 - If and as we collect more data/it grows in complexity - we likely will need to apply the same decoupling of domains by way of bounded contexts to our databases. *We should condsider breaking up the database. Technical requirements and prudence should drive the implementation of breakup (schemas vs instances, etc). Each new distinct piece should relate to a given bouned context and should house ONLY the data required to support the Vertical Slices of those BCs.*
 
-## Additional Principles
-These principles, while value adding, do not directly support the goals nor did they fall into non-goal. As such guidelines were not built around these principles. These 
+## Recommendations
+These recommendations, while value adding, do not necessitate being a guideline and being subject to the remediation requirements of a guideline. They are worth understanding and applying as fit.
 
-- Validate at all IO boundaries (guideline above indicates just handler request data). *Typescript can be a powerful tool, but it is only useful at compile time (as you write and build code). Validating that data being ingested by a process written using Typescript can go a long way in ensuring that the type safety provided by Typescript is reliable.*
+- Validate at all IO boundaries (guideline above indicates just handler request data). *Typescript can be a powerful tool, but it is only useful at compile time (as you write and build code). Validating that data being ingested by a process written using Typescript can go a long way in ensuring that the type safety provided by Typescript is reliable. Omitting validation at a boundary leaves room for undesirable behavior and sneaky errors (imagine getting "cannot read property X of undefined" when the type system supposedly doesn't allow it)*
 
-- Endeavour to make invalid states impossible. *Example1: If performing operations that utilize an email address which must be validated, consider creating a branded type `type ValidatedEmail = { _tag: "ValidatedEmail"; value: string }` rather than utilizing a `string`. Example2: Rather than `type School = { name: string; familyData?: FamilyData; partnerData?: PartnerData }` do `type School = FamilySchool | PartnerSchool; type FamilySchool = { _tag: "FamilySchool"; name: string; familyData: FamilyData }; type PartnerSchool = { _tag: "PartnerSchool"; name: string; partnerData: PartnerData }`*
+- Endeavour to make invalid states impossible. [Examples](./examples.md#endeavour-to-make-invalid-states-impossible)
 
 ## Wiggle Room
 This document doesn't aim to define code styling (commads, linting rules, args as object vs not) nor does it aim to define the implementation of given abstractions as long as they don't deviate from the guidelines. *For example you could have one Vertical Slice utilizing a driver to execute queries directly against a database through a connection while another Vertical Slice utilizes an ORM. As long as both slices don't expose database concerns to the consumer of a given slice then both strategies are acceptable. Another example would be tests. Maybe one slice tests itself by unit tests via isolated dependency and mocks + integration tests for side effecst while another test uses just uses api level integration (acceptance) testing. Both are acceptable as long as there is coverage.*
