@@ -1,13 +1,16 @@
 # Working with Bounded Contexts in Hub
 
 ## Intro
-This document outlines a number of guidelines to follow while working in Hub. These guidelines are intended to lead an engineer towards achieving a set of goals outlined below. These guidelines are based around a set of common patterns, paradigms, tools, or principles that we'll call useful abstractions (UA) for the purpose of this document.
+This document defines a number of guidelines to follow while working in Hub. Guidelines for working across projects can be found here (*not yet written*).
 
-So what are some of the useful abstractions that we utilize? Some of the notable UAs are Domain Driven Design, Bounded Contexts, Command Query Separation, Verticle Slices Architecture, Functional styled Procedural Programming, Ports and Adapters, The Repository Pattern, and Onion (aka Clean aka Hexagonal) Architecture. Not all UAs are implemented dogmatically, and doing so would lead to many instances of conflict between the UAs. Rather choice core parts from the UAs have been chosen and applied in such a way that these parts are orthogonal to each other and support well the defined goals.
+These guidelines are intended to lead an engineer towards achieving a set of goals outlined below. These guidelines are based around a set of common patterns, paradigms, tools, or principles that we'll call useful abstractions (UA) for the purpose of this document.
 
-As of this writing these patterns are only really used for new code within the Hub application.
+So what are some of the useful abstractions that we utilize? Some of the notable UAs are Domain Driven Design, Bounded Contexts, Command Query Separation, Verticle Slices Architecture, Functional styled Procedural Programming, Ports and Adapters, The Repository Pattern, and Onion (aka Clean aka Hexagonal) Architecture. Not all UAs are implemented dogmatically, and doing so would lead to many instances of conflict between the UAs. Rather choice core parts from different UAs have been chosen and applied in such a way that these parts are orthogonal to each other and support well the defined goals.
 
-This document will not attempt to answer all critiques of these UAs nor will it discuss the in depth the tradeoffs of why these UAs are the right tools. There are links towards the bottom of the document to resources that can help facilitate learning.
+
+This document will not attempt to answer all critiques of a given guideline or UA nor will it discuss in depth the tradeoffs of why these guidelines the associated UA(s) are the right tools.
+
+For more on different UAs check out the [learning doc](learning.md).
 
 ## Goals
 - Code for a given capability is easy to find.
@@ -19,7 +22,7 @@ This document will not attempt to answer all critiques of these UAs nor will it 
 - Flexibility for implementation within defined bounraries. *Unlimited flexibility (autonomy) leads to multiple competing standards, analysis paralysis, lack of direction, and a lack of predictability in code. Inflexibility (too many conventions/only a single way to do something) leads to brittle code, overly complicated code for the purpose of adhering to defined rules, difficulty with corner cases. The sweet spot is one where there are multiple correct implementations that each can be derived from a set of UAs or guidelines. This provides confidence to an engineer because they are able to orient on a UA or guideline for direction while having to autonomy to being able to chart the appropriate course to get there.*
 
 ## Non Goals
-- Don't Repeat Yourself (DRY) and Brevity at the expensive of clarity. *DRYness and Brevity are often associated with readability and understandability, but these should be seen as side effects of Clarity. If ever in doubt about a decision between dry/brevity and clarity, err on the side of clarity. Flexibility is also valuable given Prenda's current state. There are many instances in which sacrificing DRYness and Brevity for flexibility is the correct choice.*
+- Don't Repeat Yourself (DRY) and Brevity at the expensive of clarity. *DRYness and Brevity are often associated with readability and understandability, but these should be seen as side effects of Clarity. If ever in doubt about a decision between dry/brevity and clarity, err on the side of clarity. Flexibility is also valuable given Prenda's current state - history of many pivots and a future requiring pivoting and adaptability.*
 
 ## Guidelines
 - Other than the consumption of a command or query, code sharing between bounded contexts should be avoided by default. There may be cases where a bounded context is implemented in a different project. In this case no dependency should be had on the code of that project and integration must be done asynchronously (http call, event handler, etc).  *This is a concept borrowed from Domain Driven Design - specifically Bounded Contexts.*
