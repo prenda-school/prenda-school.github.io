@@ -29,7 +29,7 @@ This document will not attempt to answer all critiques of these UAs nor will it 
 
 - Domain types, regardless of whether scoped to a slice or scoped to a bounded context, should not depend on code that is not itself either domain code or is a generic utility type (error handling, ts utils, and such). *This is a concept borrowed from Clean/Hexagonal/Onion architecture and key piece in the internal consistency of our domain model if followed. Exceptions to this rule should be very slim or non existent.*
 
-- Repository layer code is the only code that should depend on types representing the shape of database table/view/query/etc. *The implementation details of data persistence should not be exposed to consumers of a domain model that utilizes said persistence. One of the quickest ways to a building a ball of mud is to do let a database schema (slow and risky to change) be the source of truth for the shape of a domain model across all layers and systems. There are cases where this is ok (constrained problem space, prototypes, etc), but this should be avoided by default. More reading (LINK)*
+- Repository layer code is the only code that should depend on types representing the shape of database table/view/query/etc. *The implementation details of data persistence should not be exposed to consumers of a domain model that utilizes said persistence. One of the quickest ways to a building a ball of mud is to do let a database schema (slow and risky to change) be the source of truth for the shape of a domain model across all layers and systems. There are cases where this is ok (constrained problem space, prototypes, etc), but this should be avoided by default.*
 
 - CRUD type functions that create new records, fetch records by an unique id with no other filters, or mutate existing records without conditions, should reside in a directory called `crud-fns` within the shared `repository` directory.
 
@@ -37,7 +37,7 @@ This document will not attempt to answer all critiques of these UAs nor will it 
 
 - All data should only have a single source of truth. *It is ok for data to be stored in multiple places as long as the source of truth is always one location. For concepts that exist within multiple domains (students), it is perfectly acceptable for that concept to have it's source of truth spread across data stores as long as no part (field) of any individual meaning is has it's source of truth in more than one location.*
 
-- The known errors of a command/query within a Vertical Slice should be included in it's type signature. *It is recommended to coerce exceptions to values for known errors whenever possible, but at minimum no known errors should be exposed from a command/query function by way of thrown exception.*
+- The known errors of a command/query within a Vertical Slice should be included in its type signature. *It is recommended to coerce exceptions to values for known errors whenever possible, but at minimum no known errors should be exposed from a command/query function by way of thrown exception.*
 
 - If an error represents a possible bad data state there should be documentation regarding this bad data state and how to remediate it. *At minimum there should be a comment attached to the type definition for a given error that provides appropriate context.*
 
