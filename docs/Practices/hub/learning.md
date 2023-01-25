@@ -1,11 +1,16 @@
 # Learning Resources
 
+## Validatation
+
 ## Coupling and Cohesion
 This may be the most important concept to understand.
 
 ## Vertical Slices
 
 ## Bounded Contexts
+
+## Domain Modeling
+- [Errors as Documentation](https://aldesantis.medium.com/fail-better-turning-software-errors-into-documentation-764a6bb7d71f)
 
 ## Clean/Hexagonal/Onion Architecture
 
@@ -16,6 +21,10 @@ This may be the most important concept to understand.
 ## Testing
 
 ## Make Invalid States Impossible
+
+## Persistence Agnosticism
+
+## Eventual Consistency
 
 ## Repository Pattern
 
