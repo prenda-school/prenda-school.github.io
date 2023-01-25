@@ -21,6 +21,10 @@ This may be the most important concept to understand.
 
 ## Functional vs Object Oriented vs Procedural
 
+## Derived Types
+
+### [Synchronized Derived Types](https://javascript.plainenglish.io/typescript-how-to-create-synchronized-derived-types-4bf2371a9eab) *5 min read*
+
 ## Imperative vs Declarative
 
 ## Command Query Separation
