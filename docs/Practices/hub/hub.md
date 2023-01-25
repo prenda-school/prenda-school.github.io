@@ -16,6 +16,7 @@ This document will not attempt to answer all critiques of these UAs nor will it 
 - The API of code implementing a behavior is clear. *You should know exactly what data is required to successfully initiate a behavior as well as understanding the expected failures of that behavior*
 - Failures due to essential complexity should be uniquely and easily identifiable and bad data states caused by such errors should be easily remediated.
 - Code should be covered by automated tests. *Testing strategy and acceptable coverage are not currently specified, but shoot for as much as possible.*
+- Flexibility for implementation within defined bounraries. *Unlimited flexibility (autonomy) leads to multiple competing standards, analysis paralysis, lack of direction, and a lack of predictability in code. Inflexibility (too many conventions/only a single way to do something) leads to brittle code, overly complicated code for the purpose of adhering to defined rules, difficulty with corner cases. The sweet spot is one where there are multiple correct implementations that each can be derived from a set of UAs or guidelines. This provides confidence to an engineer because they are able to orient on a UA or guideline for direction while having to autonomy to being able to chart the appropriate course to get there.*
 
 ## Non Goals
 - Don't Repeat Yourself (DRY) and Brevity at the expensive of clarity. *DRYness and Brevity are often associated with readability and understandability, but these should be seen as side effects of Clarity. If ever in doubt about a decision between dry/brevity and clarity, err on the side of clarity. Flexibility is also valuable given Prenda's current state. There are many instances in which sacrificing DRYness and Brevity for flexibility is the correct choice.*
@@ -30,8 +31,6 @@ This document will not attempt to answer all critiques of these UAs nor will it 
 - Domain types, regardless of whether scoped to a slice or scoped to a bounded context, should not depend on code that is not itself either domain code or is a generic utility type (error handling, ts utils, and such). *This is a concept borrowed from Clean/Hexagonal/Onion architecture and key piece in the internal consistency of our domain model if followed. Exceptions to this rule should be very slim or non existent.*
 
 - Repository layer code is the only code that should depend on types representing the shape of database table/view/query/etc. *The implementation details of data persistence should not be exposed to consumers of a domain model that utilizes said persistence. One of the quickest ways to a building a ball of mud is to do let a database schema (slow and risky to change) be the source of truth for the shape of a domain model across all layers and systems. There are cases where this is ok (constrained problem space, prototypes, etc), but this should be avoided by default.*
-
-- CRUD type functions that create new records, fetch records by an unique id with no other filters, or mutate existing records without conditions, should reside in a directory called `crud-fns` within the shared `repository` directory.
 
 - Don't require more data for a function than is required. *A slim API is less risky to change and easier maintain and reason about.*
 
@@ -52,6 +51,8 @@ There are cases of existing code not meeting these existing guidelines. Refactor
 This document doesn't aim to define code styling (commads, linting rules, args as object vs not) nor does it aim to define the implementation of given abstractions as long as they don't deviate from the guidelines. *For example you could have one Vertical Slice utilizing a driver to execute queries directly against a database through a connection while another Vertical Slice utilizes an ORM. As long as both slices don't expose database concerns to the consumer of a given slice then both strategies are acceptable. Another example would be tests. Maybe one slice tests itself by unit tests via isolated dependency and mocks + integration tests for side effecst while another test uses just uses api level integration (acceptance) testing. Both are acceptable as long as there is coverage.*
 
 ## Conventions
+Sometimes guidance that provides more specificity than a guideline needs to exist. More often than not this is for code organization purposes. For the purpose of this document conventions should be seen as more specific guidelines or extensions to the guidelines.
+
 Naming:
 - The entrypoint function for a command or query should start with `command` or `query`.
 - The entrypoint function for a command or query should be in a file called `command.ts` or `query.ts` OR in a region called `Command` or `Query`.
@@ -61,6 +62,7 @@ Naming:
 - Repository code (code that interects with a data store), should be in a file called `repository.ts`, OR in a region called `Repository`.
 - (Request or Event) Handlers exposing a command should be in a file called `api.ts`, a region called `API`, or in files called `request.ts` or `event.ts` in a directory called `handlers`.
 - Integration code for bounded contexts in a different project should be in a `dependent-bcs` directory with sub directories matching tha appropriate bounded context. *As of Jan 24 2023 this is not being utilized. Defining this early to reduce decision overhead when this occurs.*
+- CRUD type functions that create new records, fetch records by an unique id with no other filters, or mutate existing records without conditions, should reside in a directory called `crud-fns` within the shared `repository` directory.
 
 Tests:
 - Test files should sit close to the code they test. *Test files that test code in disparate files should be broken up into multiple test files itself.*
@@ -80,5 +82,27 @@ These principles, while value adding, do not directly support the goals nor did 
 
 - Endeavour to make invalid states impossible. *Example1: If performing operations that utilize an email address which must be validated, consider creating a branded type `type ValidatedEmail = { _tag: "ValidatedEmail"; value: string }` rather than utilizing a `string`. Example2: Rather than `type School = { name: string; familyData?: FamilyData; partnerData?: PartnerData }` do `type School = FamilySchool | PartnerSchool; type FamilySchool = { _tag: "FamilySchool"; name: string; familyData: FamilyData }; type PartnerSchool = { _tag: "PartnerSchool"; name: string; partnerData: PartnerData }`*
 
-## How this doc changes
+## Useful Abstractions
+- Principle: Slim Apis are Easier to Maintain *LINK*
+- Architecture: Vertical Slices *LINK*
+- Architecture: (Domain Driven Design) Bounded Contexts *LINK*
+- Architecture: (Clean/Hexagonal/)
+
+## Contributing
+
+### Process to change
 TODO
+
+### Tips for changes
+Sometimes a guideline doesn't quite implement the intent of a UA. Or maybe a UA itself doesn't quite drive behavior towards the goals. Or maybe there's alternative guidelines, UA, or even goals that would better be better options than the existing ones. Or maybe a convention is a bit strict or doesn't quite fit.
+
+When defining a change it is important to keep in mind some points for the following:
+
+Conventions:
+- Ask if a convention is really needed or not. Due to the specificity of conventions, a bad convention can end up causing more harm than benefit.
+- Does a convention support or extend (provide more context) to an existing guideline. If not, then does it support a goal or help bring clarity to a project? Would this simply be better as a some "suggestion" text in the project README or a discussion in slack/github/meeting?
+
+Guidelines:
+- Make sure a guideline implements the intent of a UA - whether it's a new or existing one.
+- Try and be as flexible as possible. *For example the Guideline "Don't require more data for a function than is required." doesn't actually specify whether a function should take an object with fields as a single argument or simply take multiple arguments. While there are arguments for both sides, it really doesn't matter in the context of the guideline whether or not you take a single object vs multiple arguments.*
+
