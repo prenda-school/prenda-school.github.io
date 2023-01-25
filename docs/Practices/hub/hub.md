@@ -52,11 +52,15 @@ There are cases of existing code not meeting these existing guidelines. Refactor
 
 Any code that must break a guideline should be called out, addressed, and either documented for cases which make sense to break a guideline, or have an associated tech debt ticket created in cases where breaking a guideline is required to quickly remediate a critical issue that following a guideline would delay. *An example of this might be a critical bug that needs to be out ASAP. Maybe a fix was written and through existing automated tests + some manual testing + developer intuiton it is determined that this fix works and won't make the problem worse. In this case it is pragmatic to get this fix out even if it ignores the guideline for testing to prove a fix.*
 
-## Wiggle Room
-This document doesn't aim to define code styling (commads, linting rules, args as object vs not) nor does it aim to define the implementation of given abstractions as long as they don't deviate from the guidelines. *For example you could have one Vertical Slice utilizing a driver to execute queries directly against a database through a connection while another Vertical Slice utilizes an ORM. As long as both slices don't expose database concerns to the consumer of a given slice then both strategies are acceptable. Another example would be tests. Maybe one slice tests itself by unit tests via isolated dependency and mocks + integration tests for side effecst while another test uses just uses api level integration (acceptance) testing. Both are acceptable as long as there is coverage.*
-
 ## Conventions
-Sometimes guidance that provides more specificity than a guideline needs to exist. More often than not this is for code organization purposes. For the purpose of this document conventions should be seen as more specific guidelines or extensions to the guidelines.
+Sometimes guidance that provides more specificity than a guideline needs to exist. 
+
+
+More often than not this is for enabling better implication. For example a naming convention allows engineers to draw better and more accurate conclusions without needing to review documentation. 
+
+Additionally guidelines might be library, framework, or project specific. Defining rules around how to interact with a library for example might be pragmatic if that library has capabilities that by some usages might conflict with existing guidelines.
+
+For the purpose of this document, conventions should be seen as more specific guidelines or extensions to the guidelines.
 
 Naming:
 - The entrypoint function for a command or query should start with `command` or `query`.
@@ -73,7 +77,7 @@ Tests:
 - Test files should sit close to the code they test. *Test files that test code in disparate files should be broken up into multiple test files itself.*
 
 SQL:
-- Avoid using the (massive scripts directory)[https://massivejs.org/docs/functions-and-scripts]. Prefer instead to define a query as close to it's consumers as possible. *Defining queries in the scripts directory opens up the possibility of unintended coupling by non cohesive modules. There are solutions to syntax highlighting that don't require a .sql file.*
+- Avoid using the [massive scripts directory](https://massivejs.org/docs/functions-and-scripts). Prefer instead to define a query as close to it's consumers as possible. *Defining queries in the scripts directory opens up the possibility of unintended coupling by non cohesive modules. There are solutions to syntax highlighting that don't require a .sql file.*
 
 ## The Future
 - In the very near future it might make sense to refactor out shared repo shapes functions in the Microschool Administration and Support Bounded Context to a layer that is shared between all bounded contexts. *It's a fact that the lion's share of data utilized by Hub is in a one of the schemas in our postgres instance and utilizing a single shared layer among all consumers within Hub might be the most pragmatic approach.*
@@ -86,6 +90,9 @@ These principles, while value adding, do not directly support the goals nor did 
 - Validate at all IO boundaries (guideline above indicates just handler request data). *Typescript can be a powerful tool, but it is only useful at compile time (as you write and build code). Validating that data being ingested by a process written using Typescript can go a long way in ensuring that the type safety provided by Typescript is reliable.*
 
 - Endeavour to make invalid states impossible. *Example1: If performing operations that utilize an email address which must be validated, consider creating a branded type `type ValidatedEmail = { _tag: "ValidatedEmail"; value: string }` rather than utilizing a `string`. Example2: Rather than `type School = { name: string; familyData?: FamilyData; partnerData?: PartnerData }` do `type School = FamilySchool | PartnerSchool; type FamilySchool = { _tag: "FamilySchool"; name: string; familyData: FamilyData }; type PartnerSchool = { _tag: "PartnerSchool"; name: string; partnerData: PartnerData }`*
+
+## Wiggle Room
+This document doesn't aim to define code styling (commads, linting rules, args as object vs not) nor does it aim to define the implementation of given abstractions as long as they don't deviate from the guidelines. *For example you could have one Vertical Slice utilizing a driver to execute queries directly against a database through a connection while another Vertical Slice utilizes an ORM. As long as both slices don't expose database concerns to the consumer of a given slice then both strategies are acceptable. Another example would be tests. Maybe one slice tests itself by unit tests via isolated dependency and mocks + integration tests for side effecst while another test uses just uses api level integration (acceptance) testing. Both are acceptable as long as there is coverage.*
 
 ## Contributing
 TODO
