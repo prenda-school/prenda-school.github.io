@@ -13,7 +13,7 @@ This document will not attempt to answer all critiques of these UAs nor will it 
 - Code for a given capability is easy to find.
 - Changes to a given behavior are less risky.
 - The effects of a change to a domain model shape are clear and should cascade and only to those dependents that actually utilize the changes.
-- The API of code implementing a behavior is clear. *You should know exactly what data is required to successfully initiate a behavior as well as understanding exactly how 
+- The API of code implementing a behavior is clear. *You should know exactly what data is required to successfully initiate a behavior as well as understanding the expected failures of that behavior*
 - Failures due to essential complexity should be uniquely and easily identifiable and bad data states caused by such errors should be easily remediated.
 - Code should be covered by automated tests. *Testing strategy and acceptable coverage (shoot for as much as possible) are not currently specified).
 
