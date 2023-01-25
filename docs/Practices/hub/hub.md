@@ -82,27 +82,17 @@ These principles, while value adding, do not directly support the goals nor did 
 
 - Endeavour to make invalid states impossible. *Example1: If performing operations that utilize an email address which must be validated, consider creating a branded type `type ValidatedEmail = { _tag: "ValidatedEmail"; value: string }` rather than utilizing a `string`. Example2: Rather than `type School = { name: string; familyData?: FamilyData; partnerData?: PartnerData }` do `type School = FamilySchool | PartnerSchool; type FamilySchool = { _tag: "FamilySchool"; name: string; familyData: FamilyData }; type PartnerSchool = { _tag: "PartnerSchool"; name: string; partnerData: PartnerData }`*
 
-## Useful Abstractions
-- Principle: Slim Apis are Easier to Maintain *LINK*
-- Architecture: Vertical Slices *LINK*
-- Architecture: (Domain Driven Design) Bounded Contexts *LINK*
-- Architecture: (Clean/Hexagonal/)
-
 ## Contributing
 
 ### Process to change
 TODO
 
 ### Tips for changes
-Sometimes a guideline doesn't quite implement the intent of a UA. Or maybe a UA itself doesn't quite drive behavior towards the goals. Or maybe there's alternative guidelines, UA, or even goals that would better be better options than the existing ones. Or maybe a convention is a bit strict or doesn't quite fit.
-
-When defining a change it is important to keep in mind some points for the following:
+Guidelines:
+- Make sure a guideline implements the intent of a UA - whether it's a new or existing one.
+- Try and be as flexible as possible. *For example the Guideline "Don't require more data for a function than is required." doesn't actually specify whether a function should take an object with fields as a single argument or simply take multiple arguments. While there are arguments for both sides, it really doesn't matter in the context of the guideline whether or not you take a single object vs multiple arguments.*
 
 Conventions:
 - Ask if a convention is really needed or not. Due to the specificity of conventions, a bad convention can end up causing more harm than benefit.
 - Does a convention support or extend (provide more context) to an existing guideline. If not, then does it support a goal or help bring clarity to a project? Would this simply be better as a some "suggestion" text in the project README or a discussion in slack/github/meeting?
-
-Guidelines:
-- Make sure a guideline implements the intent of a UA - whether it's a new or existing one.
-- Try and be as flexible as possible. *For example the Guideline "Don't require more data for a function than is required." doesn't actually specify whether a function should take an object with fields as a single argument or simply take multiple arguments. While there are arguments for both sides, it really doesn't matter in the context of the guideline whether or not you take a single object vs multiple arguments.*
 
