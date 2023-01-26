@@ -2,7 +2,7 @@
 
 
 #### TLDR
-Always run `nvm use` when starting a project. Use `npm i` for everyday development. Pay attention to package lock file updates from `npm i` and create dedicated PRs. Use `npm ci` when you want to mimic automated jobs (like CI) or install packages exactly as the lock file describes.
+Always run `nvm use` before starting a project. Use `npm i` for keeping installed packages up-to-date in everyday development. Pay attention to package lock file updates from `npm i` and open isolated pull requests fo them. Use `npm ci` when you want to mimic automated jobs (like CI) or install packages exactly as the lock file describes.
 
 ### Node and NPM version management
 
