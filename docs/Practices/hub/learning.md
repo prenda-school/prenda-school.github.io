@@ -1,4 +1,4 @@
-# Useful Abstractions Learning
+# Useful Abstractions
 The following are simply links to [useful abstractions](../../glossary.md#useful-abstraction) (UAs) that may or may not be references by the [guidelines](./hub.md#guidelines) for Hub. These are **intended as reference material to facilitate understanding and are not a canonical list of UAs we implement** in full or part within Hub or elsewhere.
 
 ## Coupling and Cohesion
@@ -52,3 +52,6 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 
 
 # Additional Learning
+
+## High Optionality Programming
+- [Link](https://www.youtube.com/watch?v=ZUiuh_n6HKg&ab_channel=Petabridge) *22 min watch*
