@@ -1,5 +1,7 @@
 # Examples
 
+## Coupling and Cohesion
+
 ## Endeavour to make invalid states impossible
 
 ### Example 1
