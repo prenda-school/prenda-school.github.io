@@ -12,7 +12,11 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
   > [In my experience, informational cohesion can really drive a large degree of coupling.](https://youtu.be/YDNR_gfBk0Q?t=228). *Informational Cohesion has it's place. But the switch from thinking with a focus on Informational Cohesion to a focus on Function Cohesion aligns you closer with business concerns and frees you from the mental gymnastics required managing coupling and cohesion while aligning new features and support of old features against an information focused system - data supports capabilities, not the other way around.*
 
 ## Vertical Slices
-- [Vertical Slice Architecture, not Layers](https://www.youtube.com/watch?v=L2Wnq0ChAIA&ab_channel=CodeOpinion)
+- [Tired of Layers? Vertical Slice Architecture to the rescue](https://www.youtube.com/watch?v=lsddiYwWaOQ) *13 min watch*
+- [Lessons Learnt from Vertical Slice Architecture](https://www.youtube.com/watch?v=Ra5M0u-dzn4&ab_channel=DDDMelbourne) *12 min watch*
+- [Vertical Slice Architecture - Jimmy Bogard](https://www.youtube.com/watch?v=SUiWfhAhgQw&ab_channel=NDCConferences)*102 min watch*
+  - [Good Thoughts about Duplication between Slices](https://youtu.be/SUiWfhAhgQw?t=2224)
+- [Vertical Slice Architecture, not Layers](https://www.youtube.com/watch?v=L2Wnq0ChAIA&ab_channel=CodeOpinion) *47 min watch*
 
 ## Bounded Contexts
 
@@ -78,3 +82,6 @@ Examples of technical debt:
 - Not identifying the distinct stages of business processes and the owners for those stages.
 - Not identifying the life cycle of data within our system.
 - Building solutions to solve "this year's problems".
+
+## Green Field Projects
+[Greenfield Project? Start HERE!](https://www.youtube.com/watch?v=WXalcPX8ak4&ab_channel=CodeOpinion)
