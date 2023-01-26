@@ -54,12 +54,16 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 # Additional Learning
 
 ## High Optionality Programming
-[Link](https://www.youtube.com/watch?v=ZUiuh_n6HKg&ab_channel=Petabridge) *22 min watch*.
+[Article]([Article]) *~10 minute read*
+
+[Video](https://www.youtube.com/watch?v=ZUiuh_n6HKg&ab_channel=Petabridge) *22 min watch*.
 
 > [The earlier you are in a project's lifecycle, the more options you have and the less expensive they are then.](https://youtu.be/ZUiuh_n6HKg?t=459). *We should pay a premium here when the options are abundant and the cost is relatively low.*
 
 > (Top Youtube Comment) The essence of architecture is at least as much about what changes are anticipated as it is about what is built.
 > Every architectural choice you make is a bet on the relative likelihood of different changes in the future. *How good a bet you can make a function of an understanding of core software design principles and experience in making (not avoiding) learning from the outcomes of bets.*
+
+> [Technical Debt is the Destruction of Options.](https://youtu.be/ZUiuh_n6HKg?t=537)
 
 Examples of technical debt:
 - Tight coupling based on [information cohesion](../../glossary.md#informational-cohesion) causing issues when bumping into [functional cohesion](../../glossary.md#functional-cohesion). The bloating of collections in mongo or tables in Hub, entity classes/types in Hub, or different modules in Zoho are good examples.
