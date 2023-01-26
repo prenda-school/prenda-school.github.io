@@ -8,14 +8,14 @@
 If performing operations that utilize an email address which must be validated, consider creating a branded type rather than utilizing a `string`. This way it becomes very clear which functions within your application need a validated email and which ones don't care.
 ```typescript
 // Original
-const sendEmail = (emailAddress: string) => {...}
+const sendEmail = (emailAddress: string) => {/* stuff */}
 
 // With Branded Type
 type ValidatedEmail = { 
   _tag: "ValidatedEmail"; 
   value: string 
 }
-const sendEmail = (emailAddress: ValidatedEmail) => {...}
+const sendEmail = (emailAddress: ValidatedEmail) => {/* stuff */}
 ``` 
 
 ### Example 2
