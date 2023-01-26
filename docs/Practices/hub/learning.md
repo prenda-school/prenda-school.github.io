@@ -1,5 +1,5 @@
 # Useful Abstractions Learning
-The following are simply links to useful abstractions that may or may not be references by the [guidelines](./hub.md#guidelines) for Hub. These are intended as reference material and are not a canonical list of abstractions we implement in full or part within Hub or
+The following are simply links to [useful abstractions](../../glossary.md#useful-abstraction) (UAs) that may or may not be references by the [guidelines](./hub.md#guidelines) for Hub. These are **intended as reference material to facilitate understanding and are not a canonical list of UAs we implement** in full or part within Hub or elsewhere.
 
 ## Coupling and Cohesion
 **This may be the most important concept to understand. The holy grail in software design and architecture is high cohesion and low coupling. This is easier said than done.**
@@ -9,7 +9,7 @@ The following are simply links to useful abstractions that may or may not be ref
 - [Low Coupling, High Cohesion](https://medium.com/clarityhub/low-coupling-high-cohesion-3610e35ac4a6) *3 min read*
 - [AVOID Entity Services by Focusing on Capabilities (snippet)](https://youtu.be/2gOOstEI4vU?t=383) *2 min watch - watch from linked timestamp*
 - [SOLID Principles? Nope, just Coupling and Cohesion](https://www.youtube.com/watch?v=YDNR_gfBk0Q&ab_channel=CodeOpinion) *14 min watch*
-  - *[In my experience, informational cohesion can really drive a large degree of coupling.](https://youtu.be/YDNR_gfBk0Q?t=228)*. Informational Cohesion has it's place. But the switch from thinking with a focus on Informational Cohesion to a focus on Function Cohesion aligns you closer with business concerns and frees you from the mental gymnastics required managing coupling and cohesion while aligning new features and support of old features against an information focused system - data supports capabilities, not the other way around.
+  - *[In my experience, informational cohesion can really drive a large degree of coupling.](https://youtu.be/YDNR_gfBk0Q?t=228)*. *Informational Cohesion has it's place. But the switch from thinking with a focus on Informational Cohesion to a focus on Function Cohesion aligns you closer with business concerns and frees you from the mental gymnastics required managing coupling and cohesion while aligning new features and support of old features against an information focused system - data supports capabilities, not the other way around.*
 
 ## Validatation
 
