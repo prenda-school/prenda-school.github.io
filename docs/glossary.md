@@ -60,3 +60,6 @@ The degree of interdependence between software modules. *ISO/IEC/IEEE 24765:2010
 ## Behavior
 
 ## Side Effect
+
+## Subcutaneous Test
+[A test that operates just under the UI of an application.](https://martinfowler.com/bliki/SubcutaneousTest.html)
