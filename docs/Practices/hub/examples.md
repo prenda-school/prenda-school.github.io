@@ -25,7 +25,7 @@ Sometimes you need to represent a single concept which can take on different sha
 - You potentially may end up operating on an object with is invalid due to conflicting fields from different kinds
 
 To resolve this, extract out the common fields to one type, create a different type for each of the kinds, then utilize the compositional to create a shape which does not allow for an invalid representation.
-```
+```typescript
 // Original Version 1
 type School = { 
   name: string; 
