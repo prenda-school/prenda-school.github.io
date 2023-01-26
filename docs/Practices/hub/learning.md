@@ -11,9 +11,8 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 - [SOLID Principles? Nope, just Coupling and Cohesion](https://www.youtube.com/watch?v=YDNR_gfBk0Q&ab_channel=CodeOpinion) *14 min watch*
   > [In my experience, informational cohesion can really drive a large degree of coupling.](https://youtu.be/YDNR_gfBk0Q?t=228). *Informational Cohesion has it's place. But the switch from thinking with a focus on Informational Cohesion to a focus on Function Cohesion aligns you closer with business concerns and frees you from the mental gymnastics required managing coupling and cohesion while aligning new features and support of old features against an information focused system - data supports capabilities, not the other way around.*
 
-## Validatation
-
 ## Vertical Slices
+- [Vertical Slice Architecture, not Layers](https://www.youtube.com/watch?v=L2Wnq0ChAIA&ab_channel=CodeOpinion)
 
 ## Bounded Contexts
 
@@ -38,11 +37,17 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 
 ## Repository Pattern
 
-## Functional vs Object Oriented vs Procedural
+## Functional Programming (FP)
+
+## Object Oriented Programming (OOP) 
+
+## Procedural Programming
+
+## Validatation
 
 ## Derived Types
 
-### [Synchronized Derived Types](https://javascript.plainenglish.io/typescript-how-to-create-synchronized-derived-types-4bf2371a9eab) *5 min read*
+- [Synchronized Derived Types](https://javascript.plainenglish.io/typescript-how-to-create-synchronized-derived-types-4bf2371a9eab) *5 min read*
 
 ## Imperative vs Declarative
 
@@ -54,7 +59,7 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 # Additional Learning
 
 ## High Optionality Programming
-[Article]([Article]) *~10 minute read*
+[Article](https://petabridge.com/blog/high-optionality-programming-pt1/) *~10 minute read*
 
 [Video](https://www.youtube.com/watch?v=ZUiuh_n6HKg&ab_channel=Petabridge) *22 min watch*.
 
