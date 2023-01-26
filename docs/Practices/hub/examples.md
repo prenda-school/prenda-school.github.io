@@ -6,7 +6,7 @@
 
 ### Example 1
 If performing operations that utilize an email address which must be validated, consider creating a branded type rather than utilizing a `string`. This way it becomes very clear which functions within your application need a validated email and which ones don't care.
-```
+```typescript
 // Original
 const sendEmail = (emailAddress: string) => {...}
 
