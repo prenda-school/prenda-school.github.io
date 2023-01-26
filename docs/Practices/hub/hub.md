@@ -79,10 +79,15 @@ Tests:
 SQL:
 - Avoid using the [massive scripts directory](https://massivejs.org/docs/functions-and-scripts). Prefer instead to define a query as close to it's consumers as possible. *Defining queries in the scripts directory opens up the possibility of unintended coupling by non cohesive modules. There are solutions to syntax highlighting that don't require a .sql file.*
 
+Routing:
+- Handlers should be wired up to routes in files within a directory called `routes` that is at the bounded context root. **
+
 ## The Future
 - In the very near future it might make sense to refactor out shared repository shapes and functions in the Microschool Administration and Support Bounded Context to a layer that is shared between all bounded contexts. *It's a fact that the lion's share of data utilized by Hub is in a one of the schemas in our postgres instance and utilizing a single shared layer among all consumers within Hub might be the most pragmatic approach.*
 
 - If and as we collect more data/it grows in complexity - we likely will need to apply the same decoupling of domains by way of bounded contexts to our databases. *We should condsider breaking up the database. Technical requirements and prudence should drive the implementation of breakup (schemas vs instances, etc). Each new distinct piece should relate to a given bouned context and should house ONLY the data required to support the Vertical Slices of those BCs.*
+
+- An potential iteration to reduce coupling between between slices in routing is to have each slice directory be able to define it's own unique route while having a shared layer at the bounded context root then reference those definitions. There are many implementations that could achieve this. One could be to use nested routing where each slice/feature set (we don't utilize feature sets yet) would define it's own router and wire handlers and then the bounded context root would aggregate those routers underneath it's own router. Another option is to have each slice define its own unique path constant and have bounded context root simply reference those constants while wiring. 
 
 ## Recommendations
 These recommendations, while value adding, do not necessitate being a guideline and being subject to the remediation requirements of a guideline. They are worth understanding and applying as fit.
