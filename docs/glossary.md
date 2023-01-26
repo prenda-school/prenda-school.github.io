@@ -14,3 +14,49 @@ The degree of interdependence between software modules. *ISO/IEC/IEEE 24765:2010
 *[...relating things together based on task, not on data.](https://youtu.be/YDNR_gfBk0Q?t=136)*
 
 ## Informational Cohesion
+
+## Ubiquitous Language
+
+## Bounded Context
+
+## Domain
+
+## Sub-Domain
+
+## Command
+
+## Query
+
+## Command Query Separation
+
+## Model
+
+## Aggregate
+
+## Aggregate Root
+
+## Domain Model
+
+## Persistence Model
+
+## Invariant
+
+## Default
+
+## Logical Boundary
+
+## Domain Transfer Object
+
+## Active Record Pattern
+
+## Repository Pattern
+
+## Anemic Data Model
+
+## Functional Programming
+
+## Object Oriented Programming
+
+## Behavior
+
+## Side Effect
