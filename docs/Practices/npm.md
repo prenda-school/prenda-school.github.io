@@ -2,7 +2,7 @@
 
 
 #### TLDR
-Use `nvm` and install packages with `npm ci` unless you're actively updating or installing new packages.
+Always run `nvm use` before starting a project. Use `npm i` for keeping installed packages up-to-date in everyday development. Pay attention to package lock file updates from `npm i` and open isolated pull requests fo them. Use `npm ci` when you want to mimic automated jobs (like CI) or install packages exactly as the lock file describes.
 
 ### Node and NPM version management
 
