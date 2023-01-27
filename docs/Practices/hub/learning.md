@@ -40,26 +40,21 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 - [CRUD API + Complexity = Death by a 1000 Papercuts](https://www.youtube.com/watch?v=kalD8TcRBCc&t=55s&ab_channel=CodeOpinion)
 - [Why Are You Still Creating CRUD APIs?](https://levelup.gitconnected.com/why-are-you-still-creating-crud-apis-8790ca261bfb)
 
-## Slim Apis are Easier to Maintain 
-
-## Testing
-
 ## Persistence Agnosticism
   - [Read up/view the bits about Database Driven Design/Programming directly against the Database](#high-optionality-programming)
 
-## Eventual Consistency
-
-## Repository Pattern
-
-## Validatation
-
 ## Derived Types
-
 - [Synchronized Derived Types](https://javascript.plainenglish.io/typescript-how-to-create-synchronized-derived-types-4bf2371a9eab) *5 min read*
 
 ## Command Query Separation
 
 ## Errors as Values
+
+## Eventual Consistency
+
+## Repository Pattern
+
+## Testing
 
 # Additional Learning
 
@@ -85,4 +80,4 @@ Examples of technical debt:
 - Building solutions to solve "this year's problems".
 
 ## Green Field Projects
-[Greenfield Project? Start HERE!](https://www.youtube.com/watch?v=WXalcPX8ak4&ab_channel=CodeOpinion)
+[Greenfield Project? Start HERE!](https://www.youtube.com/watch?v=WXalcPX8ak4&ab_channel=CodeOpinion) *13 min watch*
