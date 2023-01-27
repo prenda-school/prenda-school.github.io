@@ -30,13 +30,14 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 - [Errors as Documentation](https://aldesantis.medium.com/fail-better-turning-software-errors-into-documentation-764a6bb7d71f) *6 min read*
 - [Domain Modeling - Software Architecture Explained (Ft. Domain Driven Design)](https://www.youtube.com/watch?v=sQXpmCOCDhM&ab_channel=ProfessionalProgramming) *6 min watch*
 
-## Clean/Hexagonal/Onion Architecture
+## Clean/Hexagonal/Onion Architecture/Ports and Adapters
 - [Onion Architecture - Software Design Patterns Explained](https://www.youtube.com/watch?v=oC2Ty8H9jck&t=2s&ab_channel=ProfessionalProgramming) *12 min watch*
 - [Onion Architecture with DDD and CQRS](https://www.youtube.com/watch?v=CdZzfqwnx4I&t=968s&ab_channel=DDDEastMidlandsConference) *51 min watch*
 
-## Ports and Adapters
-
-## More than CRUD
+## Task/Behaviors instead of CRUD
+- [CRUD isn't for complexity](https://www.youtube.com/shorts/wRMLOTQT4eI) *1 min watch*
+- [CRUD API + Complexity = Death by a 1000 Papercuts](https://www.youtube.com/watch?v=kalD8TcRBCc&t=55s&ab_channel=CodeOpinion)
+- [Why Are You Still Creating CRUD APIs?](https://levelup.gitconnected.com/why-are-you-still-creating-crud-apis-8790ca261bfb)
 
 ## Slim Apis are Easier to Maintain 
 
@@ -51,24 +52,15 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 
 ## Repository Pattern
 
-## Functional Programming (FP)
-
-## Object Oriented Programming (OOP) 
-
-## Procedural Programming
-
 ## Validatation
 
 ## Derived Types
 
 - [Synchronized Derived Types](https://javascript.plainenglish.io/typescript-how-to-create-synchronized-derived-types-4bf2371a9eab) *5 min read*
 
-## Imperative vs Declarative
-
 ## Command Query Separation
 
 ## Errors as Values
-
 
 # Additional Learning
 
