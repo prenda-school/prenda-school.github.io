@@ -49,6 +49,8 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 
 ## Command Query Responsibility Separation (CQRS) + Command Query Separation (CQS)
 - [Is REST with CQRS Possible?](https://www.youtube.com/watch?v=6XO6vSiioWE&ab_channel=CodeOpinion) *17 min watch*
+- [CQRS From Scratch With TypeScript](https://medium.com/swlh/cqrs-from-scratch-with-typescript-e2ccf7fc2b64) *12 min read*
+- [https://www.youtube.com/watch?v=sD6W4n-Ksfs&ab_channel=Petabridge](https://youtu.be/sD6W4n-Ksfs?t=1287) *7 min watch (just CQRS section)*
 
 ## Errors as Values
 
