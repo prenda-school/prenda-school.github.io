@@ -28,6 +28,7 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 
 ## Domain Modeling
 - [Domain Modeling - Software Architecture Explained (Ft. Domain Driven Design)](https://www.youtube.com/watch?v=sQXpmCOCDhM&ab_channel=ProfessionalProgramming) *6 min watch*
+- [Domain Modeling Made Functional - Scott Wlaschin](https://www.youtube.com/watch?v=2JB1_e5wZmU&ab_channel=KanDDDinsky) *51 min watch*
 - [Designing with types: Making illegal states unrepresentable](https://fsharpforfunandprofit.com/posts/designing-with-types-making-illegal-states-unrepresentable/)
 - [Errors as Documentation](https://aldesantis.medium.com/fail-better-turning-software-errors-into-documentation-764a6bb7d71f) *6 min read*
 
