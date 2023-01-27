@@ -22,11 +22,17 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 - [Vertical Slice Architecture, not Layers](https://www.youtube.com/watch?v=L2Wnq0ChAIA&ab_channel=CodeOpinion) *47 min watch*
 
 ## Bounded Contexts
+- [Anatomy of Domain Driven Design (short ver.)](https://www.elbandit.co.uk/images/DDDEU-Booklet.pdf) *10 min read*
+- [Domain Driven Design Distilled](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420) *Book ~$30-40*
+- [Domain Modeling Made Functional](https://www.amazon.com/Domain-Modeling-Made-Functional-Domain-Driven/dp/1680502549) *Book ~$30-40*
 
 ## Domain Modeling
-- [Errors as Documentation](https://aldesantis.medium.com/fail-better-turning-software-errors-into-documentation-764a6bb7d71f)
+- [Errors as Documentation](https://aldesantis.medium.com/fail-better-turning-software-errors-into-documentation-764a6bb7d71f) *6 min read*
+- [Domain Modeling - Software Architecture Explained (Ft. Domain Driven Design)](https://www.youtube.com/watch?v=sQXpmCOCDhM&ab_channel=ProfessionalProgramming) *6 min watch*
 
 ## Clean/Hexagonal/Onion Architecture
+- [Onion Architecture - Software Design Patterns Explained](https://www.youtube.com/watch?v=oC2Ty8H9jck&t=2s&ab_channel=ProfessionalProgramming) *12 min watch*
+- [Onion Architecture with DDD and CQRS](https://www.youtube.com/watch?v=CdZzfqwnx4I&t=968s&ab_channel=DDDEastMidlandsConference) *51 min watch*
 
 ## Ports and Adapters
 
