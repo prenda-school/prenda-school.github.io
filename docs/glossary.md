@@ -29,6 +29,8 @@ The degree of interdependence between software modules. *ISO/IEC/IEEE 24765:2010
 
 ## Command Query Separation
 
+## Command Query Responsibility Separation
+
 ## Model
 
 ## Aggregate

@@ -47,7 +47,8 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 ## Derived Types
 - [Synchronized Derived Types](https://javascript.plainenglish.io/typescript-how-to-create-synchronized-derived-types-4bf2371a9eab) *5 min read*
 
-## Command Query Separation
+## Command Query Responsibility Separation (CQRS) + Command Query Separation (CQS)
+- [Is REST with CQRS Possible?](https://www.youtube.com/watch?v=6XO6vSiioWE&ab_channel=CodeOpinion) *17 min watch*
 
 ## Errors as Values
 
