@@ -8,7 +8,7 @@ These guidelines are intended to lead an engineer towards achieving a set of goa
 So what are some of the useful abstractions that we utilize? Some of the notable UAs are Domain Driven Design, Bounded Contexts, Command Query Separation, Verticle Slices Architecture, Functional styled Procedural Programming, Ports and Adapters, The Repository Pattern, and Onion (aka Clean aka Hexagonal) Architecture. Not all UAs are implemented dogmatically, and doing so would lead to many instances of conflict between the UAs. Rather choice core parts from different UAs have been chosen and applied in such a way that these parts are orthogonal to each other and support well the defined goals.
 
 
-This document will not attempt to answer all critiques of a given guideline or UA nor will it discuss in depth the tradeoffs of why these guidelines the associated UA(s) are the right tools.
+This document will not attempt to answer all critiques of a given guideline or UA nor will it discuss in depth the tradeoffs of why these guidelines and the associated UA(s) are the right tools.
 
 For more on different UAs check out the [learning doc](learning.md).
 
