@@ -1,6 +1,19 @@
 # Examples
 
-## Coupling and Cohesion
+## Hub Directory Structure
+```
+// WIP
+bounded-contexts
+  some-bc-1
+    domain // base domain code for some-bc-1
+    data // integration code for external resources
+    dependent-bcs // integration code for other bounded contexts
+    legacy-handlers // old code not following new architecture
+    repository
+    commands
+    queries
+  some-bc-2
+```
 
 ## Endeavour to make invalid states impossible
 

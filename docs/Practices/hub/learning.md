@@ -59,6 +59,7 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 - [CAP Theorem Simplified](https://www.youtube.com/watch?v=BHqjEjzAicA&ab_channel=ByteByteGo) *6  min watch*
 - [Data Consistency | Strong Consistency vs. Eventual Consistency | System Design for Beginners](https://www.youtube.com/watch?v=WZqGS-wczaY&ab_channel=ShiranAfergan) *7 min watch*
 - [Eventual Consistency is a UX Nightmare](https://www.youtube.com/watch?v=wEUTMuRSZT0) *12 min watch*
+- ["I NEED data from another service!"... Do you really?](https://www.youtube.com/watch?v=anL-RGKz_Ak) *11 min watch*
 - [When To Use Microservices (And When Not To!) • Sam Newman & Martin Fowler • GOTO 2020](https://www.youtube.com/watch?v=GBTdnfD6s5Q&ab_channel=GOTOConferences) *39 min watch*
   > [We tend to violate monolith architecture by not respecting modules. Breaking them into services makes it harder to do so.](https://youtu.be/GBTdnfD6s5Q?t=1209)
 
