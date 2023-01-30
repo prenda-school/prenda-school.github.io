@@ -35,7 +35,7 @@ const sendEmail = (emailAddress: ValidatedEmail) => {/* stuff */}
 Sometimes you need to represent a single concept which can take on different shapes based on it's kind. It can be tempting to tack on all the fields that might be required for all the kinds on a single type. Here are a few of the many problems you can face by doing this:
 - The type can become bloated
 - You end up optionalizing all the fields that aren't common among the kinds
-- You potentially may end up operating on an object with is invalid due to conflicting fields from different kinds
+- You potentially may end up operating on an object which is invalid due to conflicting fields from different kinds
 
 To resolve this, extract out the common fields to one type, create a different type for each of the kinds, then utilize the compositional to create a shape which does not allow for an invalid representation.
 ```typescript
