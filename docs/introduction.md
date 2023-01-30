@@ -20,7 +20,7 @@ The Engineering Team governs, creates, maintains, manages, and supports Prendaâ€
 
 ---
 
-Feel free to open pull requests to add new pages or update current pages. We want to to be a collaborative document that helps us work better together.
+Feel free to open pull requests to add new pages or update current pages. We want this to be a collaborative document that helps us work better together.
 
 
 [Engineering team principles](./Practices/how-we-engineer.md)
