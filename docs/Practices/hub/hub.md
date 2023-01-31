@@ -83,7 +83,7 @@ Routing:
 - Handlers should be wired up to routes in files within a directory called `routes` that is at the bounded context root. **
 
 ## The Future
-- In the very near future it might make sense to refactor out shared repository shapes and functions in the Microschool Administration and Support Bounded Context to a layer that is shared between all bounded contexts. *It's a fact that the lion's share of data utilized by Hub is in a one of the schemas in our postgres instance and utilizing a single shared layer among all consumers within Hub might be the most pragmatic approach.*
+- In the very near future it might make sense to refactor out shared repository shapes and functions in the Microschool Administration and Support Bounded Context to a layer that is shared between all bounded contexts. *It's a fact that the lion's share of data utilized by Hub is in one of the schemas in our postgres instance and utilizing a single shared layer among all consumers within Hub might be the most pragmatic approach.*
 
 - If and as we collect more data/it grows in complexity - we likely will need to apply the same decoupling of domains by way of bounded contexts to our databases. *We should condsider breaking up the database. Technical requirements and prudence should drive the implementation of breakup (schemas vs instances, etc). Each new distinct piece should relate to a given bounded context and should house ONLY the data required to support the Vertical Slices of those BCs.*
 
