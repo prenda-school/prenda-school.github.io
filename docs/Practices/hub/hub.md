@@ -68,7 +68,7 @@ Naming:
 - Domain code should either be in files named appropriate to the model/process/rule/etc. within a `domain` directory, or be in a `domain.ts` file, or be in a region called `Domain`.
 - Legacy request handlers that are related to a bounded context and are expected to be maintained/iterated should be put in a `legacy-handlers` directory within the appropriate bounded context.
 - Integration code for 3rd party services should be in a `Data` directory.
-- Repository code (code that interects with a data store), should be in a file called `repository.ts`, OR in a region called `Repository`.
+- Repository code (code that intersects with a data store), should be in a file called `repository.ts`, OR in a region called `Repository`.
 - (Request or Event) Handlers exposing a command should be in a file called `api.ts`, a region called `API`, or in files called `request.ts` or `event.ts` in a directory called `handlers`.
 - Integration code for bounded contexts in a different project should be in a `dependent-bcs` directory with sub directories matching tha appropriate bounded context. *As of Jan 24 2023 this is not being utilized. Defining this early to reduce decision overhead when this occurs.*
 - CRUD type functions that create new records in a single tab, fetch records by an unique id with no other filters from a single table, or mutate existing records without conditions from a single table, should reside in a directory called `crud-fns` within the shared `repository` directory.
