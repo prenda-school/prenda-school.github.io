@@ -31,3 +31,6 @@ Documents can live elsewhere and be linked here. We'll probably organize them be
 
 Documentation created using Docusaurus. You can view and edit the code on the [Github Repo](https://github.com/prenda-school/prenda-school.github.io)
 If you're looking for information about how these documents are generated, please see the [docusaurus documentation](https://docusaurus.io/docs)
+
+### OKR's
+[Current OKR's](https://docs.google.com/spreadsheets/d/1lsh0g64wUnEY1zGZiwqIO-CIw8JIQGfi6oU-FtjkxH4/edit#gid=1651695189)
