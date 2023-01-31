@@ -48,7 +48,7 @@ For more on different UAs check out the [learning doc](learning.md).
 - [UA: Validation](./learning.md#validatation) Validation should be performed on all handler request data.
 
 ## Remediation of code not meeting guidelines
-There are cases of existing code not meeting these existing guidelines. Refactoring existing code to meet these guidelines should be seen as tech debt and prioritized accordingly. Effort should be taken to have all new code should meet these guidelines. 
+There are cases of existing code not meeting these existing guidelines. Refactoring existing code to meet these guidelines should be seen as tech debt and prioritized accordingly. Effort should be taken to have all new code meet these guidelines. 
 
 Any code that must break a guideline should be called out, addressed, and either documented for cases which make sense to break a guideline, or have an associated tech debt ticket created in cases where breaking a guideline is required to quickly remediate a critical issue that following a guideline would delay. *An example of this might be a critical bug that needs to be out ASAP. Maybe a fix was written and through existing automated tests + some manual testing + developer intuition it is determined that this fix works and won't make the problem worse. In this case it is pragmatic to get this fix out even if it ignores the guideline for testing to prove a fix.*
 
