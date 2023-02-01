@@ -5,13 +5,40 @@
 // WIP
 bounded-contexts
   some-bc-1
-    domain // base domain code for some-bc-1
-    data // integration code for external resources
-    dependent-bcs // integration code for other bounded contexts
-    legacy-handlers // old code not following new architecture
-    repository
+    domain            // base domain code for some-bc-1
+    data              // integration code for external resources
+    dependent-bcs     // integration code for other bounded contexts
+    legacy-handlers   // old code not following new architecture
+    repository        // shared database code for all slices
+      crud-fns        // functions that mutate data a single entity w/o condition or search by a unique id w/o filtering
+        find-entity1-by-id.ts
+        insert-entity2.ts
+      entity1.ts      // types representing database tables required for entity1
+      entity2.ts      // types representing database tables required for entity2
     commands
+      some-command-1
+        index.ts      // An index.ts file with API, command, domain, and repository regions
+      some-command-2
+        api.ts
+        command.ts
+        domain.ts
+        repository.ys
+      some-command-3
+        handlers
+          request.ts
+          event.ts
+        command.ts
+        domain.ts
+        repository.ts
     queries
+      some-query-1
+        index.ts      // An index.ts file with API, query, domain, and repository regions
+      some-query-2
+        api.ts
+        domain.ts
+        query.ts
+        repository.ts
+    routes
   some-bc-2
 ```
 
