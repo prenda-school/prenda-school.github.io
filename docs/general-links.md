@@ -7,6 +7,7 @@ sidebar_label: Links
 - [Current OKR Report](https://docs.google.com/spreadsheets/d/1lsh0g64wUnEY1zGZiwqIO-CIw8JIQGfi6oU-FtjkxH4/edit#gid=1651695189)
 - [Engineering OKRs](https://docs.google.com/document/d/1pWtHCSoy3ba2FfDQmTnDutdI1Ege2RsXJ92MFomtWI4/edit)
 - [Tracking Tech Debt %](https://docs.google.com/spreadsheets/d/1oMrYPMF8bIbGTNDujVYsw1L35KwWJXbueO_eCwjgAyQ/edit#gid=0)
+- [Duplicative Data Points List](https://docs.google.com/spreadsheets/d/1zb28o5ZXX_sSHUi3jlofcDcEuPoH4BQlqxqPCu1yVwI/edit#gid=0)
 - [Critical Processes List](https://docs.google.com/spreadsheets/d/1NVMrWX724Mclvcz1L42bDT72-mxErg7OE-cJGnvLI1c/edit#gid=0)
 - [Critical Processes Documentation](./CriticalProcesses/index.mdx)
 
