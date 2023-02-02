@@ -49,7 +49,7 @@ We capture user data in the spirit of [The Segment Spec](https://segment.com/doc
 
 Our custom event properties do not include user identity information or other general metadata. Segment takes care of associating events with users and their identity information, and tracking metadata like location and time ([example event in json format](https://segment.com/docs/connections/spec/track/#example)).
 
-Our event names follow a standard format: **Location - Sub-location (optional) - Object Action**. Event properties
+Our event names follow a standard format: **Location - Sub-location (optional) - Object Action**.
 
 The **location** is your application (or other unique source). The **object** (a noun) is the piece of the app that the user is interacting with. The **action** (a past tense verb) is how user interacts with that object -- it is a . A **sub-location** can be used to help distinguish events that would otherwise have the same name or that benefit from being grouped by sub-page, area, or feature -- it is optional. For each part, use Proper Case. For example,
 
