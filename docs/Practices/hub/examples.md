@@ -22,7 +22,7 @@ bounded-contexts
         api.ts
         command.ts
         domain.ts
-        repository.ys
+        repository.ts
       some-command-3
         handlers
           request.ts
@@ -38,7 +38,9 @@ bounded-contexts
         domain.ts
         query.ts
         repository.ts
-    routes
+    routes            // Routes go in this dir, not much guidelines past this. Reference routing point in [the future](hub.md#the-future) for possible iterations
+      router1.ts
+      router2.ts
   some-bc-2
 ```
 
