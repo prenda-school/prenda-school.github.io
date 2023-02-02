@@ -1,5 +1,5 @@
 ---
-sidebar_label: Links
+sidebar_label: External Docs 
 ---
 # Links to external documentation
 
