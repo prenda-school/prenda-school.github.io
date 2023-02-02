@@ -67,8 +67,9 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 - [Is Domain Driven Design Overrated?](https://www.youtube.com/watch?v=cTtO0oFohMY&ab_channel=iSAQB) *51 min watch*
 
 ## Repository Pattern
-
-## Testing
+- [The Repository Pattern explained for EVERYONE (with Code Examples)](https://www.youtube.com/watch?v=Wiy54682d1w) *14 min watch*
+- [Repository Pattern using NestJS](https://blog.logrocket.com/exploring-repository-pattern-typescript-node/) *6 min read*
+  - The example uses NestJS but the repository pattern can easily be implemented without a framework. Pre-application of a dependency matching an interface/type requirement against a curried function is one way that also works.
 
 # Additional Learning
 
