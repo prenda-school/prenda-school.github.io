@@ -1,7 +1,7 @@
 ---
 sidebar_label: External Docs 
 ---
-# Links to external documentation
+# External documentation
 
 ### Engineering Team OKRs
 - [Current OKR Report](https://docs.google.com/spreadsheets/d/1lsh0g64wUnEY1zGZiwqIO-CIw8JIQGfi6oU-FtjkxH4/edit#gid=1651695189)
