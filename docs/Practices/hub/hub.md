@@ -73,7 +73,7 @@ Naming:
 - Integration code for bounded contexts in a different project should be in a `dependent-bcs` directory with sub directories matching tha appropriate bounded context. *As of Jan 24 2023 this is not being utilized. Defining this early to reduce decision overhead when this occurs.*
 - CRUD type functions that create new records in a single tab, fetch records by an unique id with no other filters from a single table, or mutate existing records without conditions from a single table, should reside in a directory called `crud-fns` within the shared `repository` directory.
 
-*[Hub Directory Structure Example](examples.md#hub-directory-structure)*
+*[Hub Directory Structure Example](examples.md#)*
 
 Tests:
 - Test files should sit close to the code they test. *Test files that test code in disparate files should be broken up into multiple test files itself.*
