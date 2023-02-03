@@ -67,5 +67,5 @@ The degree of interdependence between software modules. *ISO/IEC/IEEE 24765:2010
 [A test that operates just under the UI of an application.](https://martinfowler.com/bliki/SubcutaneousTest.html)
 
 ## DRY
-
+"Don't Repeat Yourself" Once you write the same code twice be very aware of that pattern and the third time it shows up, extract it.
 ## WET
