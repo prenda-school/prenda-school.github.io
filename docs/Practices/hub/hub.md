@@ -52,6 +52,8 @@ There are cases of existing code not meeting these existing guidelines. Refactor
 
 Any code that must break a guideline should be called out, addressed, and either documented for cases which make sense to break a guideline, or have an associated tech debt ticket created in cases where breaking a guideline is required to quickly remediate a critical issue that following a guideline would delay. *An example of this might be a critical bug that needs to be out ASAP. Maybe a fix was written and through existing automated tests + some manual testing + developer intuition it is determined that this fix works and won't make the problem worse. In this case it is pragmatic to get this fix out even if it ignores the guideline for testing to prove a fix.*
 
+[UA: Domain Driven Design - Bounded Contexts](./learning.md#bounded-contexts) You should not reach into the database for another service. Other services should also not reach into Hub's db. *As of Feb 3 2023, the other databases are the Enrollments db (postgres) and the Prendaworld db (mongo).*
+
 ## Conventions
 Sometimes guidance that provides more specificity than a guideline needs to exist. 
 
@@ -85,7 +87,7 @@ Routing:
 - Handlers should be wired up to routes in files within a directory called `routes` that is at the bounded context root. **
 
 ## The Future
-- In the very near future it might make sense to refactor out shared repository shapes and functions in the Microschool Administration and Support Bounded Context to a layer that is shared between all bounded contexts. *It's a fact that the lion's share of data utilized by Hub is in one of the schemas in our postgres instance and utilizing a single shared layer among all consumers within Hub might be the most pragmatic approach.*
+- In the very near future it might make sense to refactor out shared repository shapes and functions in the Microschool Administration and Support Bounded Context to a layer that is shared between all bounded contexts. *It's a fact that the lion's share of data utilized by Hub is in one of the schemas in our postgres instance and utilizing a single shared repository model among all consumers within Hub might be the most pragmatic approach.*
 
 - If and as we collect more data/it grows in complexity - we likely will need to apply the same decoupling of domains by way of bounded contexts to our databases. *We should condsider breaking up the database. Technical requirements and prudence should drive the implementation of breakup (schemas vs instances, etc). Each new distinct piece should relate to a given bounded context and should house ONLY the data required to support the Vertical Slices of those BCs.*
 
