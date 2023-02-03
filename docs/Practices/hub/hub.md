@@ -111,7 +111,7 @@ TODO
 
 ### Tips for changes
 Guidelines:
-- Make sure a guideline implements the intent of a UA - whether it's a new or existing one.
+- Make sure a guideline implements the intent of a [UA](../../glossary.md#useful-abstraction) - whether it's a new or existing one.
 - Try and be as flexible as possible. *For example the Guideline "Don't require more data for a function than is required." doesn't actually specify whether a function should take an object with fields as a single argument or simply take multiple arguments. While there are arguments for both sides, it really doesn't matter in the context of the guideline whether or not you take a single object vs multiple arguments.*
 
 Conventions:
