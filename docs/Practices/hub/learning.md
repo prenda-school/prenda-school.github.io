@@ -88,7 +88,7 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 Examples of technical debt:
 - Tight coupling based on [information cohesion](../../glossary.md#informational-cohesion) causing issues when bumping into [functional cohesion](../../glossary.md#functional-cohesion). The bloating of collections in mongo or tables in Hub, entity classes/types in Hub, or different modules in Zoho are good examples.
 - Tight coupling of unrelated concerns. There are cases where changing the alias of a column in a sql query or a field on a table would require changes all the way up to a React component.
-- Any of the data integrity issue's we've had or STILL have and haven't resolved (school/term statuses, guide data, parent data, microschool data, etc.).
+- Any of the data integrity issues we've had or STILL have and haven't resolved (school/term statuses, guide data, parent data, microschool data, etc.).
 - The lack of a *single* and *independent* Authorization capability to serve all consumers.
 - Not identifying the distinct stages of business processes and the owners for those stages.
 - Not identifying the life cycle of data within our system.
