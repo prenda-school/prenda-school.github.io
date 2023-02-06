@@ -2,7 +2,7 @@
 
 It should be noted that many of these terms are overloaded and could mean different things depending on context. This document simply defines what these terms mean in the context of discussions at Prenda. You may very well see differences in how these terms are used in content external to Prenda.
 
-## Useful Abstraction
+## Useful Abstraction (UA)
 A generic term used to describe a pattern, paradigm, tools, principle, practice, defined process, or architecture.
 
 ## Coupling
@@ -67,5 +67,5 @@ The degree of interdependence between software modules. *ISO/IEC/IEEE 24765:2010
 [A test that operates just under the UI of an application.](https://martinfowler.com/bliki/SubcutaneousTest.html)
 
 ## DRY
-
+"Don't Repeat Yourself" Once you write the same code twice be very aware of that pattern and the third time it shows up, extract it.
 ## WET
