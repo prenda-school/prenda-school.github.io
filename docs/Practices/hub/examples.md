@@ -61,7 +61,7 @@ const sendEmail = (emailAddress: ValidatedEmail) => {/* stuff */}
 ``` 
 
 ### Example 2
-Sometimes you need to represent a single concept which can take on different shapes based on it's kind. It can be tempting to tack on all the fields that might be required for all the kinds on a single type. Here are a few of the many problems you can face by doing this:
+Sometimes you need to represent a single concept which can take on different shapes based on its kind. It can be tempting to tack on all the fields that might be required for all the kinds on a single type. Here are a few of the many problems you can face by doing this:
 - The type can become bloated
 - You end up optionalizing all the fields that aren't common among the kinds
 - You potentially may end up operating on an object which is invalid due to conflicting fields from different kinds
