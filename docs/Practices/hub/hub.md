@@ -81,7 +81,7 @@ Tests:
 - Test files should sit close to the code they test. *Test files that test code in disparate files should be broken up into multiple test files itself.*
 
 SQL:
-- Avoid using the [massive scripts directory](https://massivejs.org/docs/functions-and-scripts). Prefer instead to define a query as close to it's consumers as possible. *Defining queries in the scripts directory opens up the possibility of unintended coupling by non cohesive modules. There are solutions to syntax highlighting that don't require a .sql file.*
+- Avoid using the [massive scripts directory](https://massivejs.org/docs/functions-and-scripts). Prefer instead to define a query as close to its consumers as possible. *Defining queries in the scripts directory opens up the possibility of unintended coupling by non cohesive modules. There are solutions to syntax highlighting that don't require a .sql file.*
 
 Routing:
 - Handlers should be wired up to routes in files within a directory called `routes` that is at the bounded context root. **
