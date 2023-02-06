@@ -61,7 +61,7 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 - [Eventual Consistency is a UX Nightmare](https://www.youtube.com/watch?v=wEUTMuRSZT0) *12 min watch*
 - ["I NEED data from another service!"... Do you really?](https://www.youtube.com/watch?v=anL-RGKz_Ak) *11 min watch*
 - [When To Use Microservices (And When Not To!) • Sam Newman & Martin Fowler • GOTO 2020](https://www.youtube.com/watch?v=GBTdnfD6s5Q&ab_channel=GOTOConferences) *39 min watch*
-  > [We tend to violate monolith architecture by not respecting modules. Breaking them into services makes it harder to do so.](https://youtu.be/GBTdnfD6s5Q?t=1209)
+  > [We tend to violate monolith architecture by not respecting modules. Breaking them into services makes it harder to do so.](https://youtu.be/GBTdnfD6s5Q?t=1209) *3 min watch - just the Organization and teams section*
 
 ## Domain Driven Design
 - [Is Domain Driven Design Overrated?](https://www.youtube.com/watch?v=cTtO0oFohMY&ab_channel=iSAQB) *51 min watch*
