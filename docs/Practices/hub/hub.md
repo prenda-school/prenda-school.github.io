@@ -46,6 +46,15 @@ For more on different UAs check out the [learning doc](learning.md).
 - [UA: Testing](./learning.md#testing) When a bug is fixed an existing test should be updated to "prove" the fix or a new test should be written to accompany the fix.
 
 - [UA: Validation](./learning.md#validatation) Validation should be performed on all handler request data.
+  
+  Validate for:
+  - Shape *correct fields in correct structure with correct spelling*
+  - Types *string, number, boolean, etc*
+  - Invariants *Rules to check for model consistency.*
+    - One example is if property a is optional and if a is provided then b must be provided - but ONLY in the case of a being provided.
+    - Another example is if a has the value "X" and b must be greater than 600 if a is "X" - then check for that.
+    - Here is a video with an [example](https://www.youtube.com/watch?v=64ngP-aUYPc&t=131s) *90 sec watch* Just watch the invariant section of video.
+    - Some invariants may be fine to be checked within the command itself. This will be the case for invariance checks that require additional work (such as fetching data) required to arrange the required data for a check. Invariance validation at the handler layer is mostly for being able to verify that the appropriate data required for valid attempt at command execution is present.
 
 ## Remediation of code not meeting guidelines
 There are cases of existing code not meeting these existing guidelines. Refactoring existing code to meet these guidelines should be seen as tech debt and prioritized accordingly. Effort should be taken to have all new code meet these guidelines. 
