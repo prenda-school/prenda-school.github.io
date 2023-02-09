@@ -56,12 +56,12 @@ For more on different UAs check out the [learning doc](learning.md).
     - Here is a video with an [example](https://www.youtube.com/watch?v=64ngP-aUYPc&t=131s) *90 sec watch* Just watch the invariant section of video.
     - Some invariants may be fine to be checked within the command itself. This will be the case for invariance checks that require additional work (such as fetching data) required to arrange the required data for a check. Invariance validation at the handler layer is mostly for being able to verify that the appropriate data required for valid attempt at command execution is present.
 
+- [UA: Domain Driven Design - Bounded Contexts](./learning.md#bounded-contexts) You should not reach into the database for another service. Other services should also not reach into Hub's db. *As of Feb 3 2023, the other databases are the Enrollments db (postgres) and the Prendaworld db (mongo).*
+
 ## Remediation of code not meeting guidelines
 There are cases of existing code not meeting these existing guidelines. Refactoring existing code to meet these guidelines should be seen as tech debt and prioritized accordingly. Effort should be taken to have all new code meet these guidelines. 
 
 Any code that must break a guideline should be called out, addressed, and either documented for cases which make sense to break a guideline, or have an associated tech debt ticket created in cases where breaking a guideline is required to quickly remediate a critical issue that following a guideline would delay. *An example of this might be a critical bug that needs to be out ASAP. Maybe a fix was written and through existing automated tests + some manual testing + developer intuition it is determined that this fix works and won't make the problem worse. In this case it is pragmatic to get this fix out even if it ignores the guideline for testing to prove a fix.*
-
-[UA: Domain Driven Design - Bounded Contexts](./learning.md#bounded-contexts) You should not reach into the database for another service. Other services should also not reach into Hub's db. *As of Feb 3 2023, the other databases are the Enrollments db (postgres) and the Prendaworld db (mongo).*
 
 ## Conventions
 Sometimes guidance that provides more specificity than a guideline needs to exist. 
