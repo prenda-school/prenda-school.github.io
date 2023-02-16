@@ -1,6 +1,5 @@
 ---
 sidebar_label: Staging
-sidebar_class_name: overview
 ---
 
 # Staging environment overview
@@ -19,17 +18,12 @@ We maintain a staging version of our system which can be used for testing and co
 
 - You can deploy a branch to staging via the GitHub Action [deploy-branch-to-staging.yml](https://github.com/prenda-school/prendaworld/actions/workflows/deploy-branch-to-staging.yml)
   - Click "Run workflow" and select your branch to deploy it out.
-  - This will send a slack notice in the #feed-staging-tech channel.
-- Check this channel to see who was the last person to deploy code, and check that they are done testing on staging. Also put a notice out in the #group-technology-internal channel.
+  - This will send a slack notice in the [#feed-staging-tech channel](https://prenda.slack.com/archives/C04NHS2280J).
+- Check this channel to see who was the last person to deploy code, and check that they are done testing on staging. Also put a notice out in the [#group-technology-internal](https://prenda.slack.com/archives/C03EG9D0YH5) channel.
 
 ## Important information
 
 - The databases for PW and Hub are updated nightly from production
-
-## Results
-
-- Summarize the main findings of the document, including any key features or benefits of the software or system.
-- Use bullet points and numbered lists to break up large blocks of text.
 
 ## Discussion
 
