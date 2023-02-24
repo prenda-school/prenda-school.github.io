@@ -9,7 +9,7 @@ The staging environment generally represents functionality from production *plus
 
 | Websites     | URL                            | Notes                              |
 | ------------ | ------------------------------ | ---------------------------------- |
-| Prenda World | https://stage.prendaworld.com/ | Only logins with email/password are supported. <br>Google Authentication has not been connected at this time (i.e., students can’t log in)  |
+| Prenda World | https://stage.prendaworld.com/ | Only logins with email/password are supported. Google Authentication has not been connected at this time (i.e., students can’t log in)  |
 | Bridge       | https://stage-bridge.prenda.co/app |  |
 | Hub          | https://stage-hub.prenda.co    |      |
   
@@ -61,8 +61,8 @@ Settings are in a JSON file in the “current version” link on the [galaxy ver
 
 - We have multiple way to testing changes before being live to our customers, utilize the staging environment or LaunchDarkly flags for this purpose.
 
-<br>
-<br>
+  
+  
 
 <!-- ## References -->
 
