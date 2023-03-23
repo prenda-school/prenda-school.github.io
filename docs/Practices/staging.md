@@ -9,7 +9,7 @@ The staging environment generally represents functionality from production *plus
 
 | Websites     | URL                            | Notes                              |
 | ------------ | ------------------------------ | ---------------------------------- |
-| Prenda World | https://stage.prendaworld.com/ | Only logins with email/password are supported. Google Authentication has not been connected at this time (i.e., students can’t log in)  |
+| Prenda World | https://stage.prendaworld.com/ | Logins with email/password are supported. Google Authentication is supported. |
 | Bridge       | https://stage-bridge.prenda.co/app |  |
 | Hub          | https://stage-hub.prenda.co    |      |
   
