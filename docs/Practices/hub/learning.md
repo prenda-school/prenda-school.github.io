@@ -71,6 +71,10 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 - [Repository Pattern using NestJS](https://blog.logrocket.com/exploring-repository-pattern-typescript-node/) *6 min read*
   - The example uses NestJS but the repository pattern can easily be implemented without a framework. Pre-application of a dependency matching an interface/type requirement against a curried function is one way that also works.
 
+## Dependency Management (Tactical in code)
+- [Functional Dependency Injection in Typescript](https://hugonteifeh.medium.com/functional-dependency-injection-in-typescript-4c2739326f57#:~:text=Functional%20dependency%20injection%20(FDI)%20is,injecting)%20those%20dependencies%20as%20arguments.) *7 min read*
+- [Six Approaches to Dependency Injection](https://fsharpforfunandprofit.com/posts/dependencies/) *20 min read (for all sub-articles)*
+
 # Additional Learning
 
 ## High Optionality Programming
