@@ -65,6 +65,7 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
 
 ## Domain Driven Design
 - [Is Domain Driven Design Overrated?](https://www.youtube.com/watch?v=cTtO0oFohMY&ab_channel=iSAQB) *51 min watch*
+- [Domain Driven Design Hexagon](https://github.com/Sairyss/domain-driven-hexagon) *30 min read (reference material)*
 
 ## Repository Pattern
 - [The Repository Pattern explained for EVERYONE (with Code Examples)](https://www.youtube.com/watch?v=Wiy54682d1w) *14 min watch*
