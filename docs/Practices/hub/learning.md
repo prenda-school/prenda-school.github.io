@@ -64,8 +64,9 @@ The following are simply links to [useful abstractions](../../glossary.md#useful
   > [We tend to violate monolith architecture by not respecting modules. Breaking them into services makes it harder to do so.](https://youtu.be/GBTdnfD6s5Q?t=1209) *3 min watch - just the Organization and teams section*
 
 ## Domain Driven Design
-- [Is Domain Driven Design Overrated?](https://www.youtube.com/watch?v=cTtO0oFohMY&ab_channel=iSAQB) *51 min watch*
 - [Domain Driven Design Hexagon](https://github.com/Sairyss/domain-driven-hexagon) *30 min read (reference material)*
+- [Using Event Storming to Introduce Domain Driven Design](https://philippe.bourgau.net/how-to-use-event-storming-to-introduce-domain-driven-design/)
+- [Is Domain Driven Design Overrated?](https://www.youtube.com/watch?v=cTtO0oFohMY&ab_channel=iSAQB) *51 min watch*
 
 ## Repository Pattern
 - [The Repository Pattern explained for EVERYONE (with Code Examples)](https://www.youtube.com/watch?v=Wiy54682d1w) *14 min watch*
